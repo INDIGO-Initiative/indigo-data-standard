@@ -16,15 +16,18 @@
     },
     "name": {
       "title": "Impact Bond Name",
+      "description": "Full name of the Social Impact Bond or Outcome-based Contract.",
       "$ref": "#/definitions/object_with_value_string"
     },
     "alternative_names": {
       "title": "Alternative Names",
+      "description": "Additional or informal names should be specified in this variable. If the project has more than one alternative name, they should be separated by commas.",
       "$ref": "#/definitions/object_with_value_string",
       "priority": 1
     },
     "stage_development": {
       "title": "Stage of Development",
+      "description": "Stage of development of the project at the moment of data collection.",
       "type": "object",
       "properties": {
         "value": {
@@ -71,30 +74,37 @@
       "properties": {
         "outcomes_contract_signed": {
           "title": "Date outcomes contract signed",
+          "description": "Date on which the outcomes contract was signed. If signed by parties on different dates, select the latest date of signature.",
           "$ref": "#/definitions/object_with_value_date_and_status"
         },
         "contracts_between_all_parties_signed": {
           "title": "Date contracts between all parties signed",
+          "description": "The date on which the full set of required contracts between impact bonds parties received sign off. That is the date – whichever is the later – on which parties signed the outcomes contract; service delivery contract; investment contract or any other contract signalling the agreement to the impact bond arrangement such that full contracting arrangements are signed.  ",
           "$ref": "#/definitions/object_with_value_date_and_status"
         },
         "anticipated_completion_date": {
           "title": "Anticipated completion date",
+          "description": "Expected date when final outcomes payments will be made.",
           "$ref": "#/definitions/object_with_value_date_and_status"
         },
         "actual_completion_date": {
           "title": "Actual completion date",
+          "description": "Actual date when final outcomes payments were made.",
           "$ref": "#/definitions/object_with_value_date_and_status"
         },
         "start_date_of_service_provision": {
           "title": "Start date of service provision",
+          "description": "Date when service provision started/will start.",
           "$ref": "#/definitions/object_with_value_date_and_status"
         },
         "anticipated_end_date_of_service_provision": {
           "title": "Anticipated end date of service provision",
+          "description": "Expected date when service provision will end.",
           "$ref": "#/definitions/object_with_value_date_and_status"
         },
         "actual_end_date_of_service_provision": {
           "title": "Actual end date of service provision",
+          "description": "Actual date when service provision ended/will end.",
           "$ref": "#/definitions/object_with_value_date_and_status"
         },
         "source_ids": {
@@ -137,6 +147,7 @@
           "properties": {
             "currency": {
               "title": "Currency",
+              "description": "Currency in which financial data is reported for this project.",
               "$ref": "#/definitions/object_with_value_string_and_status"
             },
             "amount": {
@@ -179,26 +190,32 @@
         },
         "maximum_potential_outcome_payment": {
           "title": "Maximum potential outcome payment",
+          "description": "Total maximum payments for outcomes from outcome funders. This should be equal to \"contract cap\".",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "maximum_potential_loss": {
           "title": "Maximum potential loss",
+          "description": "Percentage of principal that investors stand to lose in a worst-case scenario. Please provide for each investor, if different.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "maximum_potential_return_type": {
           "title": "Maximum potential return type",
+          "description": "This variable identifies whether the return is average annual return or IRR (Internal rate of return).",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "maximum_potential_return": {
           "title": "Maximum potential return",
+          "description": "Percentage return that investors expect to gain in best case scenario. Return can be understood as the profit on an investment. This is typically the ratio of the income from the investment over the cost of the investment. Please provide for each investor, if different.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "configuration_contracting_parties": {
           "title": "Configuration of the Contracting Parties",
+          "description": "A description of the bilateral or multilateral relationship between contracting parties. It identifies which party/parties hold the contract with the outcome funder (or which actor has majority control of a contract-holding Special Purpose Vehicle).",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "investor_repayment": {
           "title": "Investor repayment",
+          "description": "To be completed at the of the project. Extent to which investment and return was paid to investor.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "total_outcome_payments_made": {
@@ -207,14 +224,17 @@
           "properties": {
             "currency": {
               "title": "Currency",
+              "description": "Currency in which outcome payments data is reported for this project.",
               "$ref": "#/definitions/object_with_value_string_and_status"
             },
             "amount": {
               "title": "Amount",
+              "description": "Total actual payments for outcomes disbursed by outcome payers.",
               "$ref": "#/definitions/object_with_value_number_and_status"
             },
             "amount_usd": {
               "title": "Amount USD",
+              "description": "Total actual payments for outcomes disbursed by outcome payers in USD. This will be calculated by GO Lab staff.",
               "$ref": "#/definitions/object_with_value_number_and_status"
             }
           }
@@ -244,18 +264,22 @@
               "properties": {
                  "currency": {
                     "title": "Currency",
+                    "description": "The currency of the investment data provided.",
                     "$ref": "#/definitions/object_with_value_string_and_status"
                   },
                   "amount": {
                     "title": "Amount",
+                    "description": "The total invested amount to date.",
                     "$ref": "#/definitions/object_with_value_number_and_status"
                   },
                   "amount_usd": {
                     "title": "Amount USD",
+                    "description": "To be calculated by GO Lab staff using the year in the above date and World Bank data available online at https://data.worldbank.org/indicator/PA.NUS.FCRF [Note that this variable does not capture and may misrepresent fluctuations over different years. This is an issue being tackled in the prototyping process.]",
                     "$ref": "#/definitions/object_with_value_number_and_status"
                   },
                   "date": {
                     "title": "Date",
+                    "description": "The date.",
                     "$ref": "#/definitions/object_with_value_date_and_status"
                   }
               }
@@ -268,14 +292,17 @@
           "properties": {
             "target": {
               "title": "Target",
+              "description": "The targeted rate of return of an investment on the project after all costs have been considered, to determine profitability (net IRR)",
               "$ref": "#/definitions/object_with_value_string_and_status"
             },
             "latest": {
               "title": "Latest",
+              "description": "The latest actual rate of return of an investment on the project after all costs have been considered, to determine profitability. Reported as date below. If actual IRR is not being reported seek to indicate if Actual IRR exceeds Target IRR (yes/no)",
               "$ref": "#/definitions/object_with_value_string_and_status"
             },
             "date": {
               "title": "Date",
+              "description": "Date",
               "$ref": "#/definitions/object_with_value_date_and_status"
             }
           }
@@ -297,6 +324,7 @@
       "properties": {
         "social_challenge": {
           "title": "Social challenge",
+          "description": "Broad definition of the social challenges that the project addresses.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "intervention": {
@@ -305,6 +333,7 @@
         },
         "policy_sector": {
           "title": "Policy sector",
+          "description": "Main policy sector in which the project is based.",
           "type": "object",
           "properties": {
             "value": {
@@ -325,18 +354,22 @@
         },
         "primary_sdg_goal": {
           "title": "Primary SDG goal",
+          "description": "Primary Sustainable Development Goal (SDG) in which the project is based. To be selected from the 17 SDGs defined in the United Nations 2030 Agenda (2015) https://sdgs.un.org/2030agenda. [This is at the project level. This is also captured at the outcome level]",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "secondary_sdg_goals": {
           "title": "Secondary SDG goals",
+          "description": "Secondary Sustainable Development Goal (SDG) in which the project is based. Primary SDG Goal must not be included in this variable. [This is at the project level. This is also captured at the outcome level]",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "primary_sdg_target": {
           "title": "Primary SDG target",
+          "description": "This variable identifies what primary SGD target the project is addressing. See United Nations 2030 Agenda (2015)  https://sdgs.un.org/2030agenda. [This is at the project level. This is also captured at the outcome level]",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "secondary_sdg_targets": {
           "title": "Secondary SDG targets",
+          "description": "This variable identifies what secondary SGD target the project is addressing. Primary SDG target must not be included in this variable. See United Nations 2030 Agenda (2015)  https://sdgs.un.org/2030agenda. [This is at the project level. This is also captured at the outcome level]",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "source_ids": {
@@ -356,14 +389,17 @@
       "properties": {
         "target_population": {
           "title": "Target population",
+          "description": "Description of the population targeted by the project and any eligibility requirement for the cohort of people who are to be offered support.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "targeted_number_service_users_or_beneficiaries_total": {
           "title": "Targeted number of unique service users or beneficiaries (total)",
+          "description": "Intended number of individuals in the target population who will be engaged in the service/intervention and/or whose social outcomes will be evaluated for outcome contract payment calculation.",
           "$ref": "#/definitions/object_with_value_number_and_status"
         },
         "unit_type_targeted_service_users_or_beneficiaries": {
           "title": "Unit type of targeted service users or beneficiaries",
+          "description": "Description of the unit of measurement that is used to account for targeted service users or beneficiaries.",
           "type": "object",
           "properties": {
             "value": {
@@ -381,6 +417,7 @@
         },
         "unit_description_of_service_user_or_beneficiaries": {
           "title": "Unit description of targeted service user or beneficiaries",
+          "description": "This field will only be completed if the answer to the last variable was “other”. This variable identifies what type of unit of measurement is used to account for targeted service users or beneficiaries.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "actual_number_service_users_or_beneficiaries_total": {
@@ -499,18 +536,22 @@
           },
           "location_name": {
             "title": "Location - Name",
+            "description": "Name of the city or region where services are provided.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "location_postcode": {
             "title": "Location - Postcode",
+            "description": "Postal code of the location where services are provided.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "location_country": {
             "title": "Location - Country",
+            "description": "Country where services are provided.",
             "$ref": "#/definitions/object_with_value_country"
           },
           "lat_lng": {
             "title": "Lat/Lng",
+            "description": "GO Lab will add or double check this variable. This variable feeds into the map(s) on the GO Lab website.",
             "type": "object",
             "properties": {
               "lat": {
@@ -559,38 +600,47 @@
         "properties": {
           "id": {
             "title": "Id",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the analyst.",
             "type": "string"
           },
           "name": {
             "title": "Name",
+            "description": "Name of the person or institution who shared information about this project.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "type": {
             "title": "Type",
+            "description": "Type of source of information.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "publishing_organisation_ids": {
             "title": "Publishing Organisations",
+            "description": "",
             "$ref": "#/definitions/object_with_value_string"
           },
           "url": {
             "title": "URL",
+            "description": "URL of the site of the organisation that published the information about this project.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "archive_url": {
             "title": "Archive URL",
+            "description": "A preserved copy of an online source that can be accessed if the original page is moved, changes, or disappears.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "internal_url": {
             "title": "Internal URL",
+            "description": "",
             "$ref": "#/definitions/object_with_value_string"
           },
           "publication_date": {
             "title": "Publication Date",
+            "description": "Date when the information about this project was published.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "accessed_date": {
             "title": "Accessed Date",
+            "description": "Date when the information about this project was accessed.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "notes": {
@@ -613,6 +663,7 @@
         "properties": {
           "id": {
             "title": "Id",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the analyst.",
             "type": "string"
           },
           "organisation_id": {
@@ -621,10 +672,12 @@
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
+            "description": "Category of service provider.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "intervention": {
             "title": "Intervention",
+            "description": "Description of the intervention or the activities that service providers are funded to address the social challenge.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "planned_service": {
@@ -633,10 +686,12 @@
             "properties": {
               "start_date": {
                 "title": "Start",
+                "description": "Expected date when service delivery starts.",
                 "$ref": "#/definitions/object_with_value_string"
               },
               "end_date": {
                 "title": "End",
+                "description": "Expected date when service delivery ends.",
                 "$ref": "#/definitions/object_with_value_string"
               }
             }
@@ -647,10 +702,12 @@
             "properties": {
               "start_date": {
                 "title": "Start",
+                "description": "Actual date when service delivery starts.",
                 "$ref": "#/definitions/object_with_value_string"
               },
               "end_date": {
                 "title": "End",
+                "description": "Actual date when service delivery ends.",
                 "$ref": "#/definitions/object_with_value_string"
               }
             }
@@ -661,10 +718,12 @@
             "properties": {
               "description": {
                 "title": "Description",
+                "description": "his variable specifies whether there has been a modification in the service delivery. Where there are multiple alterations, this field should describe all alterations that have taken place.",
                 "$ref": "#/definitions/object_with_value_string"
               },
               "reason": {
                 "title": "Reason",
+                "description": "This variable presents the motivation for that modification, if applicable. Where there are multiple alterations, this field should describe the reason for all alterations that have taken place.",
                 "$ref": "#/definitions/object_with_value_string"
               }
             }
@@ -697,10 +756,12 @@
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
+            "description": "Category of outcome payer",
             "$ref": "#/definitions/object_with_value_string"
           },
           "maximum_potential_outcome_payment": {
             "title": "Maximum potential Outcome payment",
+            "description": "Total maximum payments for outcomes from each outcome payer.",
             "type": "object",
             "properties": {
               "currency": {
@@ -719,6 +780,7 @@
           },
           "result_type": {
             "title": "Result type",
+            "description": "This variable specifies whether a result is interim or over all (final).",
             "$ref": "#/definitions/object_with_value_string"
           },
           "period": {
@@ -727,10 +789,12 @@
             "properties": {
               "start_date": {
                 "title": "Start",
+                "description": "This variable provides the start date of the performance period.",
                 "$ref": "#/definitions/object_with_value_date"
               },
               "end_date": {
                 "title": "End",
+                "description": "This variable provides the end date of the performance period.",
                 "$ref": "#/definitions/object_with_value_date"
               }
             }
@@ -741,14 +805,17 @@
             "properties": {
               "currency": {
                 "title": "Currency",
+                "description": "Currency in which outcome payments are reported for this project.",
                 "$ref": "#/definitions/object_with_value_string_and_status"
               },
               "amount": {
                 "title": "Amount",
+                "description": "Total actual payments for outcomes disbursed by outcome payers in relevant local currency.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "amount_usd": {
                 "title": "Amount USD",
+                "description": "Total actual payments for outcomes disbursed by outcome payers in USD.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
@@ -807,10 +874,12 @@
             "properties": {
               "currency": {
                 "title": "Currency",
+                "description": "Currency in which investments are reported for this project.",
                 "$ref": "#/definitions/object_with_value_string"
               },
               "amount": {
                 "title": "Amount",
+                "description": "Amount committed by each investor, in relevant currency.",
                 "type": "object",
                 "properties": {
                   "min": {
@@ -829,6 +898,7 @@
               },
               "amount_usd": {
                 "title": "Amount USD",
+                "description": "Amount committed by each investor in USD.",
                 "type": "object",
                 "properties": {
                   "min": {
@@ -849,22 +919,27 @@
           },
           "maximum_potential_loss": {
             "title": "Maximum Potential loss",
+            "description": "Percentage of principal that investors stand to lose in a worst-case scenario.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "maximum_potential_return_type": {
             "title": "Maximum Potential Return Type",
+            "description": "This variable specifies whether the maximum potential return type is measured as average annual return or IRR.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "maximum_potential_return": {
             "title": "Maximum Potential Return",
+            "description": "Percentage return that investors stand to gain in best case scenario.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "investor_repayment": {
             "title": "Investor Repayment",
+            "description": "Extent to which investment and return was paid to investor.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "investment_type": {
             "title": "Investment Type",
+            "description": "This variable identifies whether this investment qualifies as debt, equity or a combination of both.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "source_ids": {
@@ -895,10 +970,12 @@
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
+            "description": "The role(s) or key functions performed by each of the named intermediaries.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "other_role_description": {
             "title": "Other Role Description",
+            "description": "If an organization is providing a role that is not listed above, it can be listed in this field.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "source_ids": {
@@ -925,62 +1002,77 @@
         "properties": {
           "id": {
             "title": "Id",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by any analyst. The outcome is what changes for an individual as the result of a service or intervention.",
             "type": "string"
           },
           "definition": {
             "title": "Outcome Definition",
+            "description": "An outcome target or metric is the specific value attached to the measure of outcomes for the purposes of determining whether satisfactory performance has been achieved. In an impact bond, these targets will usually determine whether a payment is made to the provider or investor. \n\nThis variable provides a detailed description of the metric(s) used to determine payments from the outcome payers. It should provide a clear definition of the conditions under which an outcome is agreed to have been 'achieved' or 'not achieved'.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "target_population": {
             "title": "Target Population",
+            "description": "Description of the targeted population of beneficiaries or service users.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "targeted_number_of_service_users_or_beneficiaries_total": {
             "title": "Targeted number of service users Or beneficiaries (total)",
+            "description": "Targeted number of beneficiaries/service users for each outcome metric",
             "$ref": "#/definitions/object_with_value_string"
           },
           "unit_type_of_targeted_service_users_or_beneficiaries": {
             "title": "Unit type of targeted Service users or beneficiaries",
+            "description": "Description of the unit of measurement that is used to account for targeted service users or beneficiaries.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "unit_description_of_service_user_or_beneficiaries": {
             "title": "Unit description of Service user or beneficiaries",
+            "description": "This field will only be completed if the answer to the last variable was “other”. This variable identifies what type of unit of measurement is used to account for targeted service users or beneficiaries.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "outcome_metric_target": {
             "$ref": "#/definitions/object_with_value_string",
-            "title": "Outcome metric target"
+            "title": "Outcome metric target",
+            "description": "Targeted levels of outcome metrics to be achieved (e.g. the proportion of people supported who are expected to achieve a given outcome)"
           },
           "other_target_for_meeting_outcome_metric_target": {
             "$ref": "#/definitions/object_with_value_string",
-            "title": "Other target for Meeting outcome metric target"
+            "title": "Other target for Meeting outcome metric target",
+            "description": "This variable identifies information about other/secondary targets that need to be met in order to achieve the outcome."
           },
           "outcome_validation_method": {
             "$ref": "#/definitions/object_with_value_string",
-            "title": "Outcome validation Method"
+            "title": "Outcome validation Method",
+            "description": "The approach taken to assessing whether the specified outcomes have been achieved and the basis on which ‘outcome payments’ will be made. This could take the form of validated administrative data (for example in a rate card for youth engagement where young people achieve education outcomes, the production of these qualifications may be used as the basis of outcome payments) or a formal and independent impact evaluation (for example under a Randomised Control Trial or quasi-experimental study outcome payments are only made when the performance of the treatment group is significantly improved when compared to the control group). To be selected from: Randomised Control Trial; Quasi-experimental study; Historical comparison (e.g. comparison to historical benchmark); Pre-Post analysis  (measurement of outcomes for target individual or  cohort before and after intervention); Simple ex-post verification; Not available."
           },
           "data_source_for_outcome_validation": {
             "$ref": "#/definitions/object_with_value_string",
-            "title": "Data source for Outcome validation"
+            "title": "Data source for Outcome validation",
+            "description": "The sources of information for outcome validation could be existing administrative data or new data collected."
           },
           "policy_sector": {
             "title": "Policy sector",
+            "description": "Main policy sector in which the project is based.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "primary_sdg_goal": {
             "title": "Primary SDG goal",
+            "description": "Primary Sustainable Development Goal (SDG) in which the project is based. To be selected from the 17 SDGs defined in the United Nations 2030 Agenda (2015) https://sdgs.un.org/2030agenda.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "secondary_sdg_goals": {
             "title": "Secondary SDG goals",
+            "description": "Secondary Sustainable Development Goal (SDG) in which the project is based. Primary SDG Goal must not be included in this variable.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "primary_sdg_target": {
             "title": "Primary SDG target",
+            "description": "This variable identifies what primary SGD target the project is addressing. See United Nations 2030 Agenda (2015)  https://sdgs.un.org/2030agenda.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "secondary_sdg_targets": {
             "title": "Secondary SDG targets",
+            "description": "This variable identifies what secondary SGD target the project is addressing. Primary SDG target must not be included in this variable. See United Nations 2030 Agenda (2015)  https://sdgs.un.org/2030agenda.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "source_ids": {
@@ -1007,14 +1099,17 @@
         "properties": {
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
+            "description": "Name of the outcome for which information is reported. This ID should be equal to the ID that was stated in the “Results” and “Outcome metrics” sections.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "currency": {
             "title": "Currency",
+            "description": "Currency in which outcome pricing information is reported for this project.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "price_per_unit": {
             "title": "Price Per Unit",
+            "description": "Price per unit, often participant, for whom outcomes are achieved. Price here is the cost to the outcome payer. This is to be populated only if there is a single outcome which is measured at the unit /individual level. Use the currency stated in the above field.",
             "type": "object",
             "properties": {
               "amount": {
@@ -1039,6 +1134,7 @@
           },
           "contracted_increases_to_outcome_pricing": {
             "title": "Currency",
+            "description": "If certain price increases have been contracted (e.g. inflation adjustments), an description of these terms should be provided. ",
             "$ref": "#/definitions/object_with_value_string"
           },
           "price_description": {
@@ -1081,18 +1177,22 @@
           },
           "date": {
             "title": "Date",
+            "description": "Date when the transaction occurred.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "sending_organisation_id": {
             "title": "Sending Organisation ID",
+            "description": "Id of the organization that makes the transaction.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "receiving_organisation_id": {
             "title": "Receiving Organisation ID",
+            "description": "Id of the organization that receives the transaction. ",
             "$ref": "#/definitions/object_with_value_string"
           },
           "transaction_type": {
             "title": "Transaction Type",
+            "description": "This variable specifies whether the transaction is a debt or repayment of debt, equity, payment for an outcome or other type of transaction. ",
             "type": "object",
             "properties": {
               "value": {
@@ -1122,6 +1222,7 @@
               },
               "amount": {
                 "title": "Amount",
+                "description": "Total amount of the transaction in relevant currency.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "amount_usd": {
@@ -1280,34 +1381,42 @@
         "properties": {
           "id": {
             "title": "Id",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by any analyst. The outcome is what changes for an individual as the result of a service or intervention.",
             "type": "string"
           },
           "title": {
             "title": "Title",
+            "description": "A summary name for this element of TA. Note that each project may have multiple elements of TA. TA may be broken into different elements as necessary to allow the category, cost and/or other variables to be completed.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "description": {
             "title": "Description",
+            "description": "Description of this element of TA.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "period_start": {
             "title": "Period Start",
+            "description": "Date when this specific element of TA starts",
             "$ref": "#/definitions/object_with_value_date"
           },
           "period_end": {
             "title": "Period End",
+            "description": "Date when this specific element of TA finishes.",
             "$ref": "#/definitions/object_with_value_date"
           },
           "funding_organisation_id": {
             "title": "Funding Organisation Id",
+            "description": "Id of the organization that pays for technical assistance.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "recipient_organisation_id": {
             "title": "Recipient Organisation Id",
+            "description": "Id of the organization that receives technical assistance. ",
             "$ref": "#/definitions/object_with_value_string"
           },
           "currency": {
             "title": "Currency",
+            "description": "Currency in which costs of TA are described.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "source_ids": {
@@ -1338,14 +1447,17 @@
           },
           "title": {
             "title": "Title",
+            "description": "A summary name for this element of TA.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "description": {
             "title": "Description",
+            "description": "A description of this element of TA.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "category": {
             "title": "Category",
+            "description": "This variable has a long list of options. TA should be broken into elements and one item from the list be selected for each element.",
             "type": "object",
             "properties": {
               "value": {
@@ -1412,6 +1524,7 @@
           },
           "approach": {
             "title": "Approach",
+            "description": "This variable captures different approaches in which a social investor can deliver TA.",
             "type": "object",
             "properties": {
               "value": {
@@ -1493,10 +1606,12 @@
           },
           "result_level": {
             "title": "Result level",
+            "description": "This variable specifies whether a result was captured at the outcome level or project level.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "result_type": {
             "title": "Result type",
+            "description": "This variable specifies whether a result is interim or final.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "period": {
@@ -1505,36 +1620,44 @@
             "properties": {
               "start_date": {
                 "title": "Start",
+                "description": "This variable provides the start date of the performance period.",
                 "$ref": "#/definitions/object_with_value_date"
               },
               "end_date": {
                 "title": "End",
+                "description": "This variable provides the end date of the performance period.",
                 "$ref": "#/definitions/object_with_value_date"
               }
             }
           },
           "outcomes_achieved": {
             "title": "Outcomes achieved",
+            "description": "A description of the outcomes that were achieved, according to the specifications of the contract.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "number_engaged_in_impact_bond": {
             "title": "Number engaged In impact bond",
+            "description": "Number of users or beneficiaries who engaged in the impact bond project.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "number_with_positive_social_outcomes": {
             "title": "Number with Positive social outcomes",
+            "description": "Number of users or beneficiaries who engaged in the impact bond project and achieved positive outcomes.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "other_description_of_result": {
             "title": "Other Description of result",
+            "description": "A broader description of the results of the impact bond, if applicable.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "outcomes_validator_organisation_ids": {
             "title": "Outcomes validator(s)",
+            "description": "Name(s) of organization(s) responsible for validating the achievement of outcomes or otherwise assessing the metrics underpinning outcome payments. One outcome can have two or more validators.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "evaluation_documents_source_ids": {
             "title": "Evaluation Documents",
+            "description": "An evaluation is an objective assessment of a programme to determine whether and to what degree the intervention in an impact bond project has had an impact on the measured outcome variables over time. This variable provides a link to any published evaluations, if applicable.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "source_ids": {
@@ -1729,7 +1852,8 @@
         "value": {
           "title": "(Value)",
           "type": "string",
-          "codelist": "countries.csv"
+          "codelist": "countries.csv",
+          "codelistDescription": "A 2 character country code from ISO 3166. Eg: GB, US"
         }
       }
     },
@@ -1777,7 +1901,8 @@
         "value": {
           "title": "(Value)",
           "type": "string",
-          "codelist": "countries.csv"
+          "codelist": "countries.csv",
+          "codelistDescription": "A 2 character country code from ISO 3166. Eg: GB, US"
         },
         "status": {
           "title": "(Status)",
