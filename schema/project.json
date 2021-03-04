@@ -673,7 +673,20 @@
           "organisation_role_category": {
             "title": "Organisation Role Category",
             "description": "Category of service provider.",
-            "$ref": "#/definitions/object_with_value_string"
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Nonprofit/NGO",
+                  "Foundation/Philanthropist",
+                  "Government/Public Sector/Public Bank",
+                  "For-profit",
+                  "Other"
+                ]
+              }
+            }
           },
           "intervention": {
             "title": "Intervention",
@@ -781,7 +794,17 @@
           "result_type": {
             "title": "Result type",
             "description": "This variable specifies whether a result is interim or over all (final).",
-            "$ref": "#/definitions/object_with_value_string"
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Interim",
+                  "Overall"
+                ]
+              }
+            }
           },
           "period": {
             "title": "Period",
@@ -925,7 +948,17 @@
           "maximum_potential_return_type": {
             "title": "Maximum Potential Return Type",
             "description": "This variable specifies whether the maximum potential return type is measured as average annual return or IRR.",
-            "$ref": "#/definitions/object_with_value_string"
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "IRR",
+                  "Average annual return"
+                ]
+              }
+            }
           },
           "maximum_potential_return": {
             "title": "Maximum Potential Return",
@@ -935,12 +968,36 @@
           "investor_repayment": {
             "title": "Investor Repayment",
             "description": "Extent to which investment and return was paid to investor.",
-            "$ref": "#/definitions/object_with_value_string"
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "No repayment (no principle or return)",
+                  "Some repayment (but below value of principle)",
+                  "Principal repaid (but no net return)",
+                  "Principal + positive financial returns",
+                  "Not publicly available"
+                ]
+              }
+            }
           },
           "investment_type": {
             "title": "Investment Type",
             "description": "This variable identifies whether this investment qualifies as debt, equity or a combination of both.",
-            "$ref": "#/definitions/object_with_value_string"
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Debt",
+                  "Equity",
+                  "Combination"
+                ]
+              }
+            }
           },
           "source_ids": {
             "title": "Sources",
@@ -971,7 +1028,24 @@
           "organisation_role_category": {
             "title": "Organisation Role Category",
             "description": "The role(s) or key functions performed by each of the named intermediaries.",
-            "$ref": "#/definitions/object_with_value_string"
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Impact bond design",
+                  "Financial and commercial modeling",
+                  "Impact bond investment structure",
+                  "Capital raise",
+                  "Loan arranger",
+                  "Performance management",
+                  "Legal counsel",
+                  "Technical assistance",
+                  "Other"
+                ]
+              }
+            }
           },
           "other_role_description": {
             "title": "Other Role Description",
@@ -1023,7 +1097,17 @@
           "unit_type_of_targeted_service_users_or_beneficiaries": {
             "title": "Unit type of targeted Service users or beneficiaries",
             "description": "Description of the unit of measurement that is used to account for targeted service users or beneficiaries.",
-            "$ref": "#/definitions/object_with_value_string"
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Individual",
+                  "Other"
+                ]
+              }
+            }
           },
           "unit_description_of_service_user_or_beneficiaries": {
             "title": "Unit description of Service user or beneficiaries",
@@ -1607,12 +1691,32 @@
           "result_level": {
             "title": "Result level",
             "description": "This variable specifies whether a result was captured at the outcome level or project level.",
-            "$ref": "#/definitions/object_with_value_string"
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Project level",
+                  "Outcome level"
+                ]
+              }
+            }
           },
           "result_type": {
             "title": "Result type",
             "description": "This variable specifies whether a result is interim or final.",
-            "$ref": "#/definitions/object_with_value_string"
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Interim",
+                  "Final"
+                ]
+              }
+            }
           },
           "period": {
             "title": "Period",
