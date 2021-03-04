@@ -620,7 +620,7 @@
           },
           "url": {
             "title": "URL",
-            "description": "URL of the site of the organisation that published the information about this project.",
+            "description": "URL of the document about this project.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "archive_url": {
