@@ -16,3 +16,9 @@ codelist_dir_path = os.path.join(
     'schema',
     'codelists'
 )
+
+html_static_path = ['_static']
+
+html_css_files = [
+    'custom.css',
+]

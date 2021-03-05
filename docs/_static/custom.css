@@ -1,0 +1,8 @@
+/**
+  * RTD theme puts nowrap on table contents. We want it to wrap.
+  * It has a very specific rule so the browser picks this over the rule we want to ignore.
+  **/
+.wy-table-responsive table tbody tr td,
+.wy-table-responsive table thead tr th {
+ white-space: normal;
+}
