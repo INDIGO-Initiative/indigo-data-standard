@@ -21,7 +21,10 @@ class DataDictionaryDirective(SphinxDirective):
             codelist_base_directory=self.config['codelist_dir_path']
         ).get()
 
-        fields_to_show = self._get_fields_worker(schema, self.options.get('path'))
+        fields_to_show = []
+        for path in [i.strip() for i in self.options.get('path').split(',') if i.strip()]:
+            fields_to_show.extend(self._get_fields_worker(schema, path))
+
 
         tgroup = nodes.tgroup(cols=3)
         for i in range(3):

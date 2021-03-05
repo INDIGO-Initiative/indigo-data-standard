@@ -17,7 +17,298 @@
     },
     "name": {
       "$ref": "#/definitions/object_with_value_string",
-      "title": "Name"
+      "title": "Name",
+      "description": "Name typically used to refer to the Outcome Fund"
+    },
+    "stage_development": {
+      "title": "Stage of Development",
+      "description": "Stage of development.",
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        }
+      }
+    },
+    "host_institution_of_outcome_fund":{
+      "$ref": "#/definitions/object_with_value_string",
+      "title": "Host institution of Outcome Fund",
+      "description": "Name of organistion acting as host or administrative lead for the Outcome Fund"
+    },
+    "mechanism": {
+      "$ref": "#/definitions/object_with_value_string",
+      "title": "Mechanism",
+      "description": "The mechanism should describe the 'how' of the outcomes fund - i.e. the means by which the Outcomes Fund will achieve the Fund objective/purpose."
+    },
+    "dates": {
+      "title": "Dates",
+      "type": "object",
+      "properties": {
+        "expression_of_interest": {
+          "title": "Expression of interest",
+          "description": "Announcement date/date Expression of Interest launched for the Outcome Fund",
+          "$ref": "#/definitions/object_with_value_date"
+        },
+        "launch_date": {
+          "title": "Launch date",
+          "description": "Earliest date when an outcomes contract was signed",
+          "$ref": "#/definitions/object_with_value_date"
+        },
+        "anticipated_end_date": {
+          "title": "Anticipated End date",
+          "description": "",
+          "$ref": "#/definitions/object_with_value_date"
+        },
+        "actual_end_date": {
+          "title": "Actual End date",
+          "description": "",
+          "$ref": "#/definitions/object_with_value_date"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "purpose_and_classifications": {
+      "title": "Purpose and classifications",
+      "type": "object",
+      "properties": {
+        "purpose": {
+          "$ref": "#/definitions/object_with_value_string",
+          "title": "Purpose",
+          "description": "Stated policy objective of the Outcomes Fund. e.g. improved learning outcomes for target population or to promote the adoption of outcomes-based approaches amongst local government commissioners."
+        },
+        "primary_sdg_goal": {
+          "title": "Primary SDG goal",
+          "description": "Primary Sustainable Development Goal (SDG) in which the project is based. To be selected from the 17 SDGs defined in the United Nations 2030 Agenda (2015) https://sdgs.un.org/2030agenda. [This is at the project level. This is also captured at the outcome level]",
+          "$ref": "#/definitions/object_with_value_string"
+        },
+        "secondary_sdg_goals": {
+          "title": "Secondary SDG goals",
+          "description": "Secondary Sustainable Development Goal (SDG) in which the project is based. Primary SDG Goal must not be included in this variable. [This is at the project level. This is also captured at the outcome level]",
+          "$ref": "#/definitions/object_with_value_string"
+        },
+        "primary_sdg_target": {
+          "title": "Primary SDG target",
+          "description": "This variable identifies what primary SGD target the project is addressing. See United Nations 2030 Agenda (2015)  https://sdgs.un.org/2030agenda. [This is at the project level. This is also captured at the outcome level]",
+          "$ref": "#/definitions/object_with_value_string"
+        },
+        "secondary_sdg_targets": {
+          "title": "Secondary SDG targets",
+          "description": "This variable identifies what secondary SGD target the project is addressing. Primary SDG target must not be included in this variable. See United Nations 2030 Agenda (2015)  https://sdgs.un.org/2030agenda. [This is at the project level. This is also captured at the outcome level]",
+          "$ref": "#/definitions/object_with_value_string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "service_and_beneficiaries": {
+      "title": "Service and beneficiaries",
+      "type": "object",
+      "properties": {
+        "target_population": {
+          "title": "Target population",
+          "description": "Description of the population targeted by the project and any eligibility requirement for the cohort of people who are to be offered support.",
+          "$ref": "#/definitions/object_with_value_string"
+        },
+        "targeted_number_service_users_or_beneficiaries_total": {
+          "title": "Targeted number of unique service users or beneficiaries (total)",
+          "description": "Intended number of individuals in the target population who will be engaged in the service/intervention and/or whose social outcomes will be evaluated for outcome contract payment calculation.",
+          "$ref": "#/definitions/object_with_value_number"
+        },
+        "unit_type_targeted_service_users_or_beneficiaries": {
+          "title": "Unit type of targeted service users or beneficiaries",
+          "description": "Description of the unit of measurement that is used to account for targeted service users or beneficiaries.",
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "(Value)",
+              "type": "string",
+              "enum": [
+                "Individual",
+                "Other"
+              ]
+            }
+          }
+        },
+        "unit_description_of_service_user_or_beneficiaries": {
+          "title": "Unit description of targeted service user or beneficiaries",
+          "description": "This field will only be completed if the answer to the last variable was “other”. This variable identifies what type of unit of measurement is used to account for targeted service users or beneficiaries.",
+          "$ref": "#/definitions/object_with_value_string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "dimensions_of_scale": {
+      "title": "Dimensions of Scale",
+      "type": "object",
+      "properties": {
+        "total_outcome_fund_value_outcomes_funding": {
+          "title": "Total Outcome Fund value (outcomes funding)",
+          "type": "object",
+          "properties": {
+            "currency": {
+              "title": "Currency",
+              "description": "Currency used to describe the size of Outcome Fund",
+              "$ref": "#/definitions/object_with_value_string"
+            },
+            "aspiration": {
+              "title": "Aspiration",
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "title": "Amount",
+                  "description": "Ambition for maximum funding available from the Outcome Fund (to be made for outcome payments directly or assistance to support the development of outcome-contracts)",
+                  "$ref": "#/definitions/object_with_value_number"
+                },
+                "amount_usd": {
+                  "title": "Amount USD",
+                  "description": "Ambition for maximum funding available from the Outcome Fund (to be made for outcome payments directly or assistance to support the development of outcome-contracts) (Conversion by INDIGO using World Bank exchange rate of the moment of expression of interest. If there is no data on dates of expression of interest, then we will use the exchange rate of the launch date)",
+                  "$ref": "#/definitions/object_with_value_number"
+                }
+              }
+            },
+            "actual": {
+              "title": "Actual",
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "title": "Amount",
+                  "description": "Actual size of funding available from the Outcome Fund (to be made for outcome payments directly or assistance to support the development of outcome-contracts)",
+                  "$ref": "#/definitions/object_with_value_number"
+                },
+                "amount_usd": {
+                  "title": "Amount USD",
+                  "description": "Actual size of funding available from the Outcome Fund (to be made for outcome payments directly or assistance to support the development of outcome-contracts)  (Conversion by INDIGO using World Bank exchange rate of the moment of expression of interest. If there is no data on dates of expression of interest, then we will use the exchange rate of the launch date)",
+                  "$ref": "#/definitions/object_with_value_number"
+                }
+              }
+            },
+            "notes": {
+              "title": "(Notes)",
+              "type": "string"
+            }
+          }
+        },
+        "total_value_of_repayable_investment_linked_to_outcome_fund": {
+          "title": "Total value of repayable investment linked to Outcome Fund",
+          "type": "object",
+          "properties": {
+            "currency": {
+              "title": "Currency",
+              "description": "Currency used to describe the size of repayable investment",
+              "$ref": "#/definitions/object_with_value_string"
+            },
+            "aspiration": {
+              "title": "Aspiration",
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "title": "Amount",
+                  "description": "Ambition for value of repayable investment associated with the Outcome Fund (i.e., the value of repayable investment committed to resultant Impact Bond projects)",
+                  "$ref": "#/definitions/object_with_value_number"
+                },
+                "amount_usd": {
+                  "title": "Amount USD",
+                  "description": "Ambition for value of repayable investment associated with the Outcome Fund (i.e., the value of repayable investment committed to resultant Impact Bond projects)",
+                  "$ref": "#/definitions/object_with_value_number"
+                }
+              }
+            },
+            "actual": {
+              "title": "Actual",
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "title": "Amount",
+                  "description": "Actual value of repayable investment associated with the Outcome Fund (i.e., the value of repayable investment committed to resultant Impact Bond projects)",
+                  "$ref": "#/definitions/object_with_value_number"
+                },
+                "amount_usd": {
+                  "title": "Amount USD",
+                  "description": "Actual value of repayable investment associated with the Outcome Fund (i.e., the value of repayable investment made available to resultant Impact Bond projects)",
+                  "$ref": "#/definitions/object_with_value_number"
+                }
+              }
+            },
+            "notes": {
+              "title": "(Notes)",
+              "type": "string"
+            }
+          }
+        },
+        "number_of_outcome_contracts": {
+          "title": "Number of outcome contracts",
+          "type": "object",
+          "properties": {
+            "aspiration": {
+              "title": "Aspiration",
+              "description": "Aspired number of distinct outcomes contracts to be supported by the Outcome Fund",
+              "$ref": "#/definitions/object_with_value_number"
+            },
+            "actual": {
+              "title": "Actual",
+              "description": "Resulting number of distinct outcomes contracts supported by the Outcome Fund",
+              "$ref": "#/definitions/object_with_value_number"
+            },
+            "notes": {
+              "title": "(Notes)",
+              "type": "string"
+            }
+          }
+        },
+        "number_of_contributing_outcome_funders": {
+          "title": "Number of Contributing Outcome Funders",
+          "type": "object",
+          "properties": {
+            "aspiration": {
+              "title": "Aspiration",
+              "description": "Aspired number of funder organisations contributing to outcome payments (e.g. a few large donor institutions or lots of local government actors?)",
+              "$ref": "#/definitions/object_with_value_number"
+            },
+            "actual": {
+              "title": "Actual",
+              "description": "Actual number of funder organisations contributing to outcome payments",
+              "$ref": "#/definitions/object_with_value_number"
+            },
+            "notes": {
+              "title": "(Notes)",
+              "type": "string"
+            }
+          }
+        },
+        "number_of_independent_investor_organisations": {
+          "title": "Number of independent investor organisations",
+          "type": "object",
+          "properties": {
+            "aspiration": {
+              "title": "Aspiration",
+              "description": "Aspired number of institutions who are putting capital at risk as investors across the Outcome Fund (or rather projects supported by the Outcome Fund?) as a whole",
+              "$ref": "#/definitions/object_with_value_number"
+            },
+            "actual": {
+              "title": "Actual",
+              "description": "Actual number of institutions who are putting capital at risk as investors across the Outcome Fund (or rather projects supported by the Outcome Fund?) as a whole",
+              "$ref": "#/definitions/object_with_value_number"
+            },
+            "notes": {
+              "title": "(Notes)",
+              "type": "string"
+            }
+          }
+        }
+      }
     },
     "identifier_scheme": {
       "$ref": "#/definitions/object_with_value_string",
@@ -43,6 +334,45 @@
           }
         }
       }
+    },
+    "geographic_areas_for_outcome_payment": {
+      "title": "Geographic area for outcome payment",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "title": "Country",
+            "description": "Country within which the Outcome Fund allocates funds.",
+            "$ref": "#/definitions/object_with_value_country"
+          }
+        }
+      }
+    },
+    "documents": {
+      "title": "Documents",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "title": "Title",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "url": {
+            "title": "URL",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        }
+      }
     }
   },
   "definitions": {
@@ -51,6 +381,37 @@
       "properties": {
         "value": {
           "type": "string"
+        }
+      }
+    },
+    "object_with_value_country": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "codelist": "countries.csv",
+          "codelistDescription": "A 2 character country code from ISO 3166. Eg: GB, US"
+        }
+      }
+    },
+    "object_with_value_date": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "pattern": "^[0-9][0-9][0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$",
+          "patternHint": "Enter a date in format YYYY, YYYY-MM or YYYY-MM-DD"
+        }
+      }
+    },
+    "object_with_value_number": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "number"
         }
       }
     }
