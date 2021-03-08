@@ -605,7 +605,7 @@
         "properties": {
           "id": {
             "title": "Id",
-            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the analyst.",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the GO Lab analyst.",
             "type": "string"
           },
           "name": {
@@ -620,7 +620,7 @@
           },
           "publishing_organisation_ids": {
             "title": "Publishing Organisations",
-            "description": "",
+            "description": "Organisation that published the evaluation, report, document or website that is cited as a source.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "url": {
@@ -673,6 +673,7 @@
           },
           "organisation_id": {
             "title": "Organisation ID",
+            "description": "INDIGO identifier of the organisation that provides services for this impact bond project. See INDIGO Identifiers section.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "organisation_role_category": {
@@ -736,7 +737,7 @@
             "properties": {
               "description": {
                 "title": "Description",
-                "description": "his variable specifies whether there has been a modification in the service delivery. Where there are multiple alterations, this field should describe all alterations that have taken place.",
+                "description": "This variable specifies whether there has been a modification in the service delivery. Where there are multiple alterations, this field should describe all alterations that have taken place.",
                 "$ref": "#/definitions/object_with_value_string"
               },
               "reason": {
@@ -770,6 +771,7 @@
         "properties": {
           "organisation_id": {
             "title": "Organisation ID",
+            "description": "INDIGO identifier of the organisation that pays for social outcomes in this impact bond project. See INDIGO Identifiers section.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "organisation_role_category": {
@@ -784,14 +786,17 @@
             "properties": {
               "currency": {
                 "title": "Currency",
+                "description": "Curency in which outcome payments are reported.",
                 "$ref": "#/definitions/object_with_value_string_and_status"
               },
               "amount": {
                 "title": "Amount",
+                "description": "Total maximum payments for outcomes from each outcome payer.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "amount_usd": {
                 "title": "Amount USD",
+                "description": "Total maximum payments for outcomes from each outcome payer in USD.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
@@ -854,10 +859,12 @@
             "properties": {
               "description": {
                 "title": "Description",
+                "description": "Detail of the modifications to payment commitments occured during the life of the impact bond project.",
                 "$ref": "#/definitions/object_with_value_string_and_status"
               },
               "reason": {
                 "title": "Reason",
+                "description": "Brief explanation of the reasons behind the modifications to payment commitments occured during the life of the impact bond project.",
                 "$ref": "#/definitions/object_with_value_string_and_status"
               }
             }
