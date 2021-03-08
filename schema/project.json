@@ -124,6 +124,7 @@
       "properties": {
         "jurisdiction": {
           "title": "Jurisdiction",
+          "description": "Project jurisdiction describes a project’s origins, using the place it is governed or organised from, under law, as a proxy.",
           "$ref": "#/definitions/object_with_value_country_and_status"
         },
         "source_ids": {
