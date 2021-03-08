@@ -330,6 +330,7 @@
         },
         "intervention": {
           "title": "Intervention",
+          "description": "Description of the intervention supported by the Impact Bond.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "policy_sector": {
