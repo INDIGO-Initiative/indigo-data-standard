@@ -157,14 +157,17 @@
               "properties": {
                 "min": {
                   "title": "Min",
+                  "description": "When it is not possible to share the exact amount of total investment, projects can present a range with minimun and maximum values.",
                   "$ref": "#/definitions/object_with_value_number_and_status"
                 },
                 "exact": {
                   "title": "Exact",
+                  "description": "Total investment amount committed by investors (capital raised), as contractually agreed. Note that this should not include any recycled outcome payments.", 
                   "$ref": "#/definitions/object_with_value_number_and_status"
                 },
                 "max": {
                   "title": "Max",
+                  "description": "When it is not possible to share the exact amount of total investment, projects can present a range with minimun and maximum values.",  
                   "$ref": "#/definitions/object_with_value_number_and_status"
                 }
               }
@@ -175,14 +178,17 @@
               "properties": {
                 "min": {
                   "title": "Min",
+                  "description": "Minimum investment amount in US dollars.",
                   "$ref": "#/definitions/object_with_value_number_and_status"
                 },
                 "exact": {
                   "title": "Exact",
+                  "description": "Exact investment amount in US dollars.",
                   "$ref": "#/definitions/object_with_value_number_and_status"
                 },
                 "max": {
                   "title": "Max",
+                  "description": "Maximum investment amount in US dollars.",
                   "$ref": "#/definitions/object_with_value_number_and_status"
                 }
               }
