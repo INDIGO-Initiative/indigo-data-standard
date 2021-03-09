@@ -16,12 +16,7 @@
     },
     "name": {
       "title": "Impact Bond Name",
-      "description": "Full name of the Social Impact Bond. What counts as an Impact Bond project? It is a contractual relationship that includes two core factors: 
-•	Payment for social or environmental outcomes achieved
-•	Up-front repayable finance provided by a third party, the repayment of which is (at least partially) conditional on achieving specified outcomes.
-
-Each impact bond project that begins work under a new contract, with a new target cohort, a distinct geography, and/or with a later start date is counted separately.
-",
+      "description": "Full name of the Social Impact Bond. What counts as an Impact Bond project? It is a contractual relationship that includes two core factors:\n• Payment for social or environmental outcomes achieved\n• Up-front repayable finance provided by a third party, the repayment of which is (at least partially) conditional on achieving specified outcomes.\n\nEach impact bond project that begins work under a new contract, with a new target cohort, a distinct geography, and/or with a later start date is counted separately.",
       "$ref": "#/definitions/object_with_value_string"
     },
     "alternative_names": {
