@@ -921,7 +921,6 @@
               },
               "amount": {
                 "title": "Amount",
-                "description": "Amount committed by each investor, in relevant currency.",
                 "type": "object",
                 "properties": {
                   "min": {
@@ -943,7 +942,6 @@
               },
               "amount_usd": {
                 "title": "Amount USD",
-                "description": "Amount committed by each investor in USD.",
                 "type": "object",
                 "properties": {
                   "min": {
@@ -1219,11 +1217,11 @@
           },
           "price_per_unit": {
             "title": "Price Per Unit",
-            "description": "Price per unit, often a participant, for whom outcomes are achieved. Price here is the cost to the outcome payer. This is to be populated only if there is a single outcome which is measured at the unit /individual level. Use the currency stated in the above field.",
             "type": "object",
             "properties": {
               "amount": {
                 "title": "Amount",
+                "description": "Price per unit, often a participant, for whom outcomes are achieved. Price here is the cost to the outcome payer. This is to be populated only if there is a single outcome which is measured at the unit /individual level. Use the currency stated in the above field.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "amount_usd": {
