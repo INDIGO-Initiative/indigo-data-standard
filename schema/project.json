@@ -424,6 +424,7 @@
         },
         "actual_number_service_users_or_beneficiaries_total": {
           "title": "Actual number of unique service users or beneficiaries engaged (total)",
+          "description": "Effective number of service users after the project was completed. The actual number of service users may differ from the targeted number, as forecasted at the beginnings of the project.", 
           "$ref": "#/definitions/object_with_value_number_and_status"
         },
         "unit_type_actual_service_users_or_beneficiaries": {
@@ -432,6 +433,7 @@
           "properties": {
             "value": {
               "title": "(Value)",
+              "description": "Description of the unit of measurement that is used to account for targeted service users or beneficiaries.",
               "type": "string",
               "enum": [
                 "Individual",
@@ -445,6 +447,7 @@
         },
         "unit_description_of_actual_service_user_or_beneficiaries": {
           "title": "Unit description of actual service user or beneficiaries engaged",
+          "description": "This field will only be completed if the answer to the last variable was “other”. This variable identifies what type of unit of measurement is used to account for actual number of service users or beneficiaries.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "source_ids": {
@@ -553,7 +556,7 @@
           },
           "lat_lng": {
             "title": "Lat/Lng",
-            "description": "GO Lab will add or double check this variable. This variable feeds into the map(s) on the GO Lab website.",
+            "description": "Latitude and longitud coordinates. GO Lab will add or double check this variable. This variable feeds into the map(s) on the GO Lab website.",
             "type": "object",
             "properties": {
               "lat": {
