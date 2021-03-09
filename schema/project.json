@@ -898,10 +898,12 @@
         "properties": {
           "id": {
             "title": "Id",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the GO Lab analyst.",
             "type": "string"
           },
           "organisation_id": {
             "title": "Organisation ID",
+            "description": "INDIGO identifier for the organisation that invested upfront capital for this project. See INDIGO Identifiers section.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "organisation_role_category": {
@@ -919,38 +921,42 @@
               },
               "amount": {
                 "title": "Amount",
-                "description": "Amount committed by each investor, in relevant currency.",
                 "type": "object",
                 "properties": {
                   "min": {
                     "title": "Min",
+                    "description": "When it is not possible to share exact amounts, projects can share a range with minimum and maximum amount of investment committed by each investor.", 
                     "$ref": "#/definitions/object_with_value_number"
                   },
                   "exact": {
                     "title": "Exact",
+                    "description": "Exact amount of committed investment from each investor.",
                     "$ref": "#/definitions/object_with_value_number"
                   },
                   "max": {
                     "title": "Max",
+                    "description": "When it is not possible to share exact amounts, projects can share a range with minimum and maximum amount of investment committed by each investor.",
                     "$ref": "#/definitions/object_with_value_number"
                   }
                 }
               },
               "amount_usd": {
                 "title": "Amount USD",
-                "description": "Amount committed by each investor in USD.",
                 "type": "object",
                 "properties": {
                   "min": {
                     "title": "Min",
+                    "description": "Minimum amount of investment committed by each investor in USD (when it is not possible to have exact amount in USD).",
                     "$ref": "#/definitions/object_with_value_number"
                   },
                   "exact": {
                     "title": "Exact",
+                    "description": "Exact amount of investment committed by each investor in USD.",
                     "$ref": "#/definitions/object_with_value_number"
                   },
                   "max": {
                     "title": "Max",
+                    "description": "Maximum amount of investment committed by each investor in USD (when it is not possible to have exact amount in USD).",
                     "$ref": "#/definitions/object_with_value_number"
                   }
                 }
@@ -1040,6 +1046,7 @@
         "properties": {
           "organisation_id": {
             "title": "Organisation ID",
+            "description": "INDIGO identifier for the organisation that provides intermediary services for this project. See INDIGO Identifiers section.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "organisation_role_category": {
@@ -1200,25 +1207,26 @@
         "properties": {
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
-            "description": "Name of the outcome for which information is reported. This ID should be equal to the ID that was stated in the “Results” and “Outcome metrics” sections.",
+            "description": "A within-project original, flexible identifier to be referenced in another sheet. This can be set by the GO Lab analyst. This ID should be equal to the ID that was stated in the “Results” and “Outcome metrics” sections.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "currency": {
             "title": "Currency",
-            "description": "Currency in which outcome pricing information is reported for this project.",
+            "description": "Currency in which outcome pricing data is reported for this project.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "price_per_unit": {
             "title": "Price Per Unit",
-            "description": "Price per unit, often participant, for whom outcomes are achieved. Price here is the cost to the outcome payer. This is to be populated only if there is a single outcome which is measured at the unit /individual level. Use the currency stated in the above field.",
             "type": "object",
             "properties": {
               "amount": {
                 "title": "Amount",
+                "description": "Price per unit, often a participant, for whom outcomes are achieved. Price here is the cost to the outcome payer. This is to be populated only if there is a single outcome which is measured at the unit /individual level. Use the currency stated in the above field.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "amount_usd": {
                 "title": "Amount USD",
+                "description": "Price per unit, often a participant, for whom outcomes are achieved in USD. Price here is the cost to the outcome payer.", 
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
@@ -1229,6 +1237,7 @@
             "properties": {
               "amount": {
                 "title": "Amount",
+                "description": "Maximum price if all targets related to that outcome are achieved.",
                 "$ref": "#/definitions/object_with_value_string"
               }
             }
@@ -1266,10 +1275,12 @@
         "properties": {
           "investment_id": {
             "title": "Investment Id",
+            "description": "A within-project original, flexible identifier to be referenced in another sheet.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
+            "description": "A within-project original, flexible identifier to be referenced in another sheet.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "grant_id": {
@@ -1283,12 +1294,12 @@
           },
           "sending_organisation_id": {
             "title": "Sending Organisation ID",
-            "description": "Id of the organization that makes the transaction.",
+            "description": "INDIGO ID of the organisation that makes the transaction.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "receiving_organisation_id": {
             "title": "Receiving Organisation ID",
-            "description": "Id of the organization that receives the transaction. ",
+            "description": "INDIGO ID of the organisation that receives the transaction. ",
             "$ref": "#/definitions/object_with_value_string"
           },
           "transaction_type": {
@@ -1319,6 +1330,7 @@
             "properties": {
               "currency": {
                 "title": "Currency",
+                "description": "Currency in which transaction data is reported.",
                 "$ref": "#/definitions/object_with_value_string"
               },
               "amount": {
@@ -1328,6 +1340,7 @@
               },
               "amount_usd": {
                 "title": "Amount USD",
+                "description": "Total amount of the transaction in USD.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
@@ -1544,6 +1557,7 @@
         "properties": {
           "technical_assistance_id": {
             "title": "Technical Assistance Id",
+            "description": "A within-project original, flexible identifier to be referenced in another sheet.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "title": {
@@ -1662,21 +1676,24 @@
             }
           },
           "cost_of_activities": {
-            "title": "Cost Of Activities",
+            "title": "Cost of Activities",
             "type": "object",
             "properties": {
               "amount": {
                 "title": "Amount",
+                "description": "Cost of Technical Assistance activities in relevant currency.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "amount_usd": {
                 "title": "Amount USD",
+                "description": "Cost of Technical Assistance activities in USD.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
           },
           "number_of_days": {
-            "title": "Number Of Days",
+            "title": "Number of Days",
+            "description": "Cost of Technical Assistance activities in days of work.",
             "$ref": "#/definitions/object_with_value_number"
           },
           "source_ids": {
@@ -1703,6 +1720,7 @@
         "properties": {
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by a GO Lab analyst.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "result_level": {
@@ -1805,6 +1823,7 @@
         "properties": {
           "ocid": {
             "title": "OCID",
+            "description": "OCID identifier that links this impact bond project with data on the contracting process.",
             "type": "string"
           },
           "source_ids": {
@@ -1831,6 +1850,7 @@
         "properties": {
           "grant_id": {
             "title": "Grant ID",
+            "description": "360Giving identifier that links this impact bond project with data on received grants.",
             "type": "string"
           },
           "source_ids": {
@@ -1857,10 +1877,12 @@
         "properties": {
           "title": {
             "title": "Title",
+            "description": "Title of related document or case study.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "url": {
             "title": "URL",
+            "description": "URL of related document or case study.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "notes": {
@@ -1883,6 +1905,7 @@
         "properties": {
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
+            "description": "A within-project original, flexible identifier to be referenced in another sheet. This can be set by a GO Lab analyst.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "period": {
@@ -1891,20 +1914,24 @@
             "properties": {
               "start_date": {
                 "title": "Start",
+                "description": "Start date of claim period.",
                 "$ref": "#/definitions/object_with_value_date"
               },
               "end_date": {
                 "title": "End",
+                "description": "End date of claim period.",
                 "$ref": "#/definitions/object_with_value_date"
               }
             }
           },
           "payer_organisation_id": {
             "title": "Payer Organisation ID",
+            "description": "INDIGO ID of organisation that is paying for outcomes.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "recipient_organisation_id": {
             "title": "Recipient Organisation ID",
+            "description": "INDIGO ID of organisation that is receiving payment for outcomes.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "type": {
@@ -1927,14 +1954,17 @@
             "properties": {
               "currency": {
                 "title": "Currency",
+                "description": "Currency in which outcome payments are reported for this project.",
                 "$ref": "#/definitions/object_with_value_string"
               },
               "amount": {
                 "title": "Amount",
+                "description": "Amount of outcome payments received in this period in relevant currency.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "amount_usd": {
                 "title": "Amount USD",
+                "description": "Amount of outcome payments received in this period in USD.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
