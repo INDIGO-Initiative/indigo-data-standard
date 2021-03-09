@@ -171,17 +171,17 @@
         "properties": {
           "id": {
             "title": "Id",
-            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by a GO Lab analyst."
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by a GO Lab analyst.",
             "type": "string"
           },
           "name": {
             "title": "Name",
-            "description": "Name of the person or institution who shared information about this organisation/party."
+            "description": "Name of the person or institution who shared information about this organisation/party.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "type": {
             "title": "Type",
-            "description": "Type of source of information."
+            "description": "Type of source of information.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "publishing_organisation_ids": {
