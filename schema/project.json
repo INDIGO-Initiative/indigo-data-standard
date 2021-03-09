@@ -781,12 +781,11 @@
           },
           "maximum_potential_outcome_payment": {
             "title": "Maximum potential Outcome payment",
-            "description": "Total maximum payments for outcomes from each outcome payer.",
             "type": "object",
             "properties": {
               "currency": {
                 "title": "Currency",
-                "description": "Curency in which outcome payments are reported.",
+                "description": "Total maximum payments for outcomes from each outcome payer. Currency.",
                 "$ref": "#/definitions/object_with_value_string_and_status"
               },
               "amount": {
@@ -796,7 +795,7 @@
               },
               "amount_usd": {
                 "title": "Amount USD",
-                "description": "Total maximum payments for outcomes from each outcome payer in USD.",
+                "description": "Total maximum payments for outcomes from each outcome payer. In USD.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
