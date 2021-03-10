@@ -562,7 +562,7 @@
           },
           "lat_lng": {
             "title": "Lat/Lng",
-            "description": "Latitude and longitud coordinates. GO Lab will add or double check this variable. This variable feeds into the map(s) on the GO Lab website.",
+            "description": "Latitude and longitude coordinates. GO Lab will add or double check this variable. This variable feeds into the map(s) on the GO Lab website.",
             "type": "object",
             "properties": {
               "lat": {
