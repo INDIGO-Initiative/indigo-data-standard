@@ -1263,7 +1263,8 @@
             "$ref": "#/definitions/object_with_value_string"
           },
           "price_description": {
-            "title": "Currency",
+            "title": "Price Description",
+            "description": "",
             "$ref": "#/definitions/object_with_value_string"
           },
           "source_ids": {
