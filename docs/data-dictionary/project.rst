@@ -150,16 +150,6 @@ Outcome Pricing
    :path: /properties/outcome_pricings/items
 
 
-Grants
-------
-
-
-.. datadictionary::
-   :schema: project.json
-   :path: /properties/grants/items
-
-
-
 Results
 -------
 
