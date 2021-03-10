@@ -87,6 +87,8 @@ Primary
 Secondary
 ^^^^^^^^^
 
+This is a list. One organisation can have multiple items of data. One item of data is defined as:
+
 .. datadictionary::
    :schema: organisation.json
    :path: /properties/org-ids/properties/secondary/items
@@ -94,12 +96,16 @@ Secondary
 Controlled By
 -------------
 
+This is a list. One organisation can have multiple items of data. One item of data is defined as:
+
 .. datadictionary::
    :schema: organisation.json
    :path: /properties/controlled_by/items
 
 Sources
 -------
+
+This is a list. One organisation can have multiple items of data. One item of data is defined as:
 
 .. datadictionary::
    :schema: organisation.json

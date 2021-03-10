@@ -72,6 +72,7 @@ Number of independent investor organisations
 Organisations
 -------------
 
+This is a list. One fund can have multiple items of data. One item of data is defined as:
 
 .. datadictionary::
    :schema: fund.json
@@ -81,6 +82,8 @@ Organisations
 Geographic area for outcome payment
 -----------------------------------
 
+This is a list. One fund can have multiple items of data. One item of data is defined as:
+
 .. datadictionary::
    :schema: fund.json
    :path: /properties/geographic_areas_for_outcome_payment/items
@@ -89,6 +92,8 @@ Geographic area for outcome payment
 
 Documents
 ---------
+
+This is a list. One fund can have multiple items of data. One item of data is defined as:
 
 .. datadictionary::
    :schema: fund.json

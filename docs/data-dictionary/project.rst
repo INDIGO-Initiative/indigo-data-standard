@@ -76,6 +76,7 @@ Outcome Funds
 Delivery Locations
 ------------------
 
+This is a list. One project can have multiple items of data. One item of data is defined as:
 
 .. datadictionary::
    :schema: project.json
@@ -85,6 +86,7 @@ Delivery Locations
 Sources
 -------
 
+This is a list. One project can have multiple items of data. One item of data is defined as:
 
 .. datadictionary::
    :schema: project.json
@@ -101,6 +103,9 @@ Organisations
 Service Provisions
 ------------------
 
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
+
 
 
 .. datadictionary::
@@ -111,6 +116,9 @@ Service Provisions
 Outcome Payment Commitments
 ---------------------------
 
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
+
 .. datadictionary::
    :schema: project.json
    :path: /properties/outcome_payment_commitments/items
@@ -118,6 +126,9 @@ Outcome Payment Commitments
 
 Investments
 -----------
+
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
 
 
 
@@ -128,6 +139,9 @@ Investments
 Intermediary services
 ---------------------
 
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
+
 
 .. datadictionary::
    :schema: project.json
@@ -136,6 +150,9 @@ Intermediary services
 Outcome Metrics
 ---------------
 
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
+
 
 .. datadictionary::
    :schema: project.json
@@ -143,6 +160,9 @@ Outcome Metrics
 
 Outcome Pricing
 ---------------
+
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
 
 
 .. datadictionary::
@@ -153,6 +173,9 @@ Outcome Pricing
 Results
 -------
 
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
+
 
 .. datadictionary::
    :schema: project.json
@@ -160,6 +183,9 @@ Results
 
 Outcome Payments
 ----------------
+
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
 
 
 .. datadictionary::
@@ -170,6 +196,9 @@ Outcome Payments
 Open Contracting
 ----------------
 
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
+
 
 .. datadictionary::
    :schema: project.json
@@ -178,6 +207,9 @@ Open Contracting
 360Giving
 ---------
 
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
+
 
 .. datadictionary::
    :schema: project.json
@@ -185,6 +217,9 @@ Open Contracting
 
 Documents
 ---------
+
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
 
 
 .. datadictionary::
@@ -238,6 +273,8 @@ The transaction type field is used to identify the purpose of the transaction.
 
 The formatting rules on dates and currency values should be followed.
 
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
 .. datadictionary::
    :schema: project.json
    :path: /properties/transactions/items
@@ -260,13 +297,14 @@ Where no cost is available, or where a cost is inappropriate, a row can be added
 
 Activities can be further classified by the delivery approach.
 
-On the `Technical Assistance` tab:
+On the `Technical Assistance` tab, there is a list. One project can have multiple items of data. One item of data is defined as:
+
 
 .. datadictionary::
    :schema: project.json
    :path: /properties/technical_assistances/items
 
-On the `Technical Assistance Details` tab:
+On the `Technical Assistance Details` tab, there is a list. One project can have multiple items of data. One item of data is defined as:
 
 .. datadictionary::
    :schema: project.json
