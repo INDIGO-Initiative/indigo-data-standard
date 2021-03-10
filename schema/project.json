@@ -1258,7 +1258,7 @@
             }
           },
           "contracted_increases_to_outcome_pricing": {
-            "title": "Currency",
+            "title": "Contracted increases to outcome pricing",
             "description": "If certain price increases have been contracted (e.g. inflation adjustments), an description of these terms should be provided. ",
             "$ref": "#/definitions/object_with_value_string"
           },
