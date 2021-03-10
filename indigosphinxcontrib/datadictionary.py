@@ -97,7 +97,7 @@ class DataDictionaryDirective(SphinxDirective):
                     )
                 )
         elif our_json_schema.get("type") in ["string", "number"]:
-            if not start_pointer.endswith('/status'):
+            if not start_pointer.endswith('/status') and not start_pointer.endswith('/sandboxes'):
                 out.append(
                     {
                         "title": self._join_title(title, our_json_schema.get("title", "")),
