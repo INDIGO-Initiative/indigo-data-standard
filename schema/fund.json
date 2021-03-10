@@ -343,7 +343,7 @@
         "properties": {
           "country": {
             "title": "Country",
-            "description": "Country within which the Outcome Fund allocates funds. It could be more than one country.",
+            "description": "Country within which the Outcome Fund allocates funds.",
             "$ref": "#/definitions/object_with_value_country"
           }
         }
