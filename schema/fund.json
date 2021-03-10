@@ -38,7 +38,7 @@
     "host_institution_of_outcome_fund":{
       "$ref": "#/definitions/object_with_value_string",
       "title": "Host institution of Outcome Fund",
-      "description": "Name of organistion acting as host or administrative lead for the Outcome Fund"
+      "description": "INDIGO ID of organisation acting as host or administrative lead for the Outcome Fund"
     },
     "mechanism": {
       "$ref": "#/definitions/object_with_value_string",
