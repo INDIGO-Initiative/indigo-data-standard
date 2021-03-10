@@ -923,7 +923,25 @@
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
-            "$ref": "#/definitions/object_with_value_string"
+            "description": "",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Nonprofit/NGO",
+                  "Foundation/Philanthropist",
+                  "Government/Public Sector/Public Bank",
+                  "Multilateral/Bilateral/Intergovernmental Financial Institution",
+                  "Corporate Giving",
+                  "Investment Fund",
+                  "High Net Worth Individual/Family Office/Private Bank",
+                  "Impact Investor",
+                  "Commercial"
+                ]
+              }
+            }
           },
           "investment_commitment": {
             "title": "Investment Commitment",
