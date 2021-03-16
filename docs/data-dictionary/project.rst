@@ -70,6 +70,11 @@ Changes to project due to COVID-19
 Outcome Funds
 -------------
 
+.. datadictionary::
+   :schema: project.json
+   :path: /properties/outcome_funds/items
+
+When viewing data, other variables from the fund data model may be included to provide more information. See :doc:`the Fund data dictionary <fund>` for more information on what these variables mean.
 
 
 
@@ -96,9 +101,11 @@ This is a list. One project can have multiple items of data. One item of data is
 Organisations
 -------------
 
+When viewing data, variables from the organisation data model may be included to provide more information. See :doc:`the Organisation data dictionary <organisation>` for more information on what these variables mean.
 
+The organisations listed are those referenced in other parts of the project, such as :ref:`data-dictionary-project-service-provisions`.
 
-
+.. _data-dictionary-project-service-provisions:
 
 Service Provisions
 ------------------
