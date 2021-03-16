@@ -1324,7 +1324,7 @@
           "date": {
             "title": "Date",
             "description": "Date when the transaction occurred.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_date"
           },
           "sending_organisation_id": {
             "title": "Sending Organisation ID",
