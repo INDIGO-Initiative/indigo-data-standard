@@ -78,7 +78,8 @@ class DataDictionaryDirective(SphinxDirective):
             contents = [contents]
         for content in contents:
             if isinstance(content, str):
-                entry += nodes.paragraph('', nodes.Text(content))
+                for content_line in content.split('\n'):
+                    entry += nodes.paragraph('', nodes.Text(content_line))
             else:
                 entry += content
         return entry
