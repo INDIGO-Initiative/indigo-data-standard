@@ -1019,7 +1019,7 @@
           "maximum_potential_return": {
             "title": "Maximum Potential Return",
             "description": "Percentage return that investors stand to gain in best case scenario.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_number"
           },
           "investor_repayment": {
             "title": "Investor Repayment",
@@ -1149,7 +1149,7 @@
           "targeted_number_of_service_users_or_beneficiaries_total": {
             "title": "Targeted number of service users Or beneficiaries (total)",
             "description": "Targeted number of beneficiaries/service users for each outcome metric",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_number"
           },
           "unit_type_of_targeted_service_users_or_beneficiaries": {
             "title": "Unit type of targeted Service users or beneficiaries",
@@ -1687,12 +1687,12 @@
           "number_engaged_in_impact_bond": {
             "title": "Number engaged In impact bond",
             "description": "Number of users or beneficiaries who engaged in the impact bond project.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_number"
           },
           "number_with_positive_social_outcomes": {
             "title": "Number with Positive social outcomes",
             "description": "Number of users or beneficiaries who engaged in the impact bond project and achieved positive outcomes.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_number"
           },
           "other_description_of_result": {
             "title": "Other Description of result",
