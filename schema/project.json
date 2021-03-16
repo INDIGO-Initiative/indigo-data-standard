@@ -222,7 +222,7 @@
         },
         "investor_repayment": {
           "title": "Investor repayment",
-          "description": "To be completed at the of the project. Extent to which investment and return was paid to investor.",
+          "description": "To be completed at the end of the project. Extent to which investment and return was paid to investor.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "total_outcome_payments_made": {
