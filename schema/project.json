@@ -665,6 +665,7 @@
           }
         }
       },
+      "minItems": 1,
       "priority": 2
     },
     "service_provisions": {
@@ -1231,6 +1232,7 @@
           }
         }
       },
+      "minItems": 1,
       "priority": 2
     },
     "outcome_pricings": {
