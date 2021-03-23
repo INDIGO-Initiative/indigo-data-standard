@@ -195,10 +195,27 @@
             }
           }
         },
-        "maximum_potential_outcome_payment": {
+        "maximum_potential_outcome_payment_v2": {
           "title": "Maximum potential outcome payment",
           "description": "Total maximum payments for outcomes from outcome funders. This should be equal to \"contract cap\".",
-          "$ref": "#/definitions/object_with_value_string_and_status"
+          "type": "object",
+          "properties": {
+            "currency": {
+              "title": "Currency",
+              "description": "",
+              "$ref": "#/definitions/object_with_value_string_and_status"
+            },
+            "amount": {
+              "title": "Amount",
+              "description": "",
+              "$ref": "#/definitions/object_with_value_number_and_status"
+            },
+            "amount_usd": {
+              "title": "Amount USD",
+              "description": "",
+              "$ref": "#/definitions/object_with_value_number_and_status"
+            }
+          }
         },
         "maximum_potential_loss": {
           "title": "Maximum potential loss",
