@@ -233,6 +233,15 @@ This is a list. One project can have multiple items of data. One item of data is
    :schema: project.json
    :path: /properties/documents/items
 
+Scenarios
+---------
+
+This is a list. One project can have multiple items of data. One item of data is defined as:
+
+.. datadictionary::
+   :schema: project.json
+   :path: /properties/scenarios/items
+
 
 Social Investment Prototype
 ---------------------------

@@ -1915,6 +1915,67 @@
           }
         }
       }
+    },
+    "scenarios": {
+      "title": "Scenarios",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Scenario Id",
+            "description": "",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "description": "",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "overall_project_finance": {
+            "title": "Overall project finance",
+            "type": "object",
+            "properties": {
+              "maximum_potential_outcome_payment_v2": {
+                "title": "Maximum potential outcome payment",
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "currency": {
+                    "title": "Currency",
+                    "description": "",
+                    "$ref": "#/definitions/object_with_value_string_and_status"
+                  },
+                  "amount": {
+                    "title": "Amount",
+                    "description": "",
+                    "$ref": "#/definitions/object_with_value_number_and_status"
+                  },
+                  "amount_usd": {
+                    "title": "Amount USD",
+                    "description": "",
+                    "$ref": "#/definitions/object_with_value_number_and_status"
+                  }
+                }
+              }
+            }
+          },
+          "status": {
+            "$ref": "#/definitions/status"
+          },
+          "sandboxes": {
+            "$ref": "#/definitions/sandboxes"
+          },
+          "source_ids": {
+            "title": "Sources",
+            "type": "string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          }
+        }
+      }
     }
   },
   "definitions": {
