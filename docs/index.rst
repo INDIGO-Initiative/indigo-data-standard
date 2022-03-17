@@ -9,6 +9,7 @@ This work is part of a new International Network for Data on Impact and Governme
    identifiers.rst
    formatting-data.rst
    data-dictionary/index.rst
+   versions_changelog.rst
 
 
 This data model was produced by  `Open Data Services Co-operative <https://opendataservices.coop/>`_ as part of a project with the University of Oxford's `Government Outcomes Lab <https://golab.bsg.ox.ac.uk/>`_.
