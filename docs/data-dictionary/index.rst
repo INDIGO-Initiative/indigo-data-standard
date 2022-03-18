@@ -7,3 +7,4 @@ Data Dictionary
    project.rst
    organisation.rst
    fund.rst
+   pipeline.rst

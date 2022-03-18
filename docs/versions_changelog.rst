@@ -25,6 +25,12 @@ Increments to Major numbers:
 Changelog
 ---------
 
+Unreleased
+~~~~~~~~~~
+
+New Pipeline model
+
+
 2.3.0 - 2022-03-18
 ~~~~~~~~~~~~~~~~~~
 

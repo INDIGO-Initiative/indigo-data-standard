@@ -1,0 +1,1509 @@
+{
+  "$id": "https://example.com/project.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+  ],
+  "properties": {
+    "status": {
+      "title": "Status",
+      "type": "string",
+      "enum": [
+        "PUBLIC",
+        "PRIVATE",
+        "DISPUTED"
+      ]
+    },
+    "name": {
+      "title": "Project Name",
+      "description": "Full name that has been to this point given to the project.",
+      "$ref": "#/definitions/object_with_value_string"
+    },
+    "alternative_names": {
+      "title": "Alternative Names",
+      "description": "Additional or informal names should be specified in this variable. If the project has more than one alternative name, they should be separated by commas.",
+      "$ref": "#/definitions/object_with_value_string"
+    },
+    "contact": {
+      "type": "object",
+      "title": "Contact",
+      "description": "",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/object_with_value_string_and_status",
+          "title": "Name",
+          "description": "Name of the person to contact."
+        },
+        "email": {
+          "$ref": "#/definitions/object_with_value_string_and_status",
+          "title": "Email",
+          "description": "Email of the person to contact."
+        }
+      }
+    },
+    "state_development": {
+      "title": "State of Development",
+      "description": "State of development of the project.",
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "(Value)",
+              "description": "",
+              "type": "string",
+              "enum": [
+                "Current",
+                "Abandoned",
+                "Launched"
+              ]
+            },
+            "status": {
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
+        "reason_abandoned": {
+          "title": "Reason for abandoned",
+          "description": "-",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "description": "-",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "description": "-",
+          "type": "string"
+        }
+      }
+    },
+    "stage_development": {
+      "title": "Stage of Development",
+      "description": "Stage of development of the project at the moment of data collection.",
+      "type": "object",
+      "properties": {
+        "stage": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "(Value)",
+              "type": "string",
+              "enum": [
+                "Scoping (e.g. pre-feasibility study to support market mapping and issue identification)  ",
+                "Early stage (e.g. beginning a feasibility study)",
+                "Late stage (e.g. final deal construction and placement)",
+                "Final negotiations"
+              ]
+            },
+            "status": {
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "description": "-",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "description": "-",
+          "type": "string"
+        }
+      }
+    },
+    "misc1": {
+      "type": "object",
+      "properties": {
+        "type_instrument_project": {
+          "title": "Type of instrument and project",
+          "description": "The type of instrument being used in this project.",
+          "type": "object",
+          "properties": {
+            "impact_bond": {
+              "title": "Impact Bond",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "outcomes_fund": {
+              "title": "Outcomes Fund",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "social_impact_incentives_siinc": {
+              "title": "Social Impact Incentives (SIINC)",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "social_impact_guarantee": {
+              "title": "Social Impact Guarantee",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "payment_by_results_no_prefinancing": {
+              "title": "Payment-by-results (no pre-financing)",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "technical_assistance_and_market_building_programme_with_dedicated_grant": {
+              "title": "Technical Assistance and Market-building program (Must involve dedicated grant resources)",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "other": {
+              "title": "Other",
+              "$ref": "#/definitions/object_with_value_string"
+            },
+            "status": {
+              "title": "(Status)",
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "part_larger_program": {
+      "title": "Part of a larger outcomes-based financing program?",
+      "description": "Is the project part of a larger outcomes-based financing program? (e.g. outcome fund, technical assistance program, etc)",
+      "type": "object",
+      "properties": {
+        "main": {
+          "title": "Part of a larger outcomes-based financing program?",
+          "$ref": "#/definitions/object_with_value_yes_no_and_status"
+        },
+        "details": {
+          "title": "Details",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "description": "-",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "description": "-",
+          "type": "string"
+        }
+      }
+    },
+    "dates": {
+      "title": "Dates",
+      "type": "object",
+      "properties": {
+        "expected_launch_date": {
+          "title": "Expected Launch Date",
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "(Value)",
+              "type": "string",
+              "enum": [
+                "Q1 – 2022",
+                "Q2 – 2022",
+                "Q3 – 2022",
+                "Q4 – 2022",
+                "Q1 - 2023",
+                "Q2 – 2023",
+                "Don’t Know"
+              ]
+            },
+            "status": {
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
+        "expected_development_time": {
+          "title": "Total expected project development time",
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "(Value)",
+              "type": "string",
+              "enum": [
+                "0-6 months",
+                "6-12 months",
+                "12-24 months",
+                ">24 months"
+              ]
+            },
+            "status": {
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
+        "expected_length": {
+          "title": "Expected length of project (years)",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "design_process_began": {
+          "title": "Project design process began",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "misc2": {
+      "type": "object",
+      "properties": {
+        "rationale_outcomes_based_financing": {
+          "title": "Rationale for using outcome based finance",
+          "description": "What is the rationale for using outcomes-based financing?",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "misc3": {
+      "type": "object",
+      "properties": {
+        "key_challenges_launch": {
+          "title": "Key challenges to launch",
+          "description": "Key challenges to getting the project launched?",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "misc4": {
+      "type": "object",
+      "properties": {
+        "role_domestic_government": {
+          "title": "Role of the domestic government",
+          "description": "What is or will be the role of the domestic government?",
+          "type": "object",
+          "properties": {
+            "outcomes_funder": {
+              "title": "Outcomes funder",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "service_provider": {
+              "title": "Service provider",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "member_project_committee": {
+              "title": "Member of project committee",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "no_formal_role": {
+              "title": "No formal role",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "other": {
+              "title": "Other",
+              "$ref": "#/definitions/object_with_value_string"
+            },
+            "status": {
+              "title": "(Status)",
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "misc5": {
+      "type": "object",
+      "properties": {
+        "service_providers_identified_selected": {
+          "title": "Service providers identified and selected",
+          "description": "Service providers identified and selected?",
+          "type": "object",
+          "properties": {
+            "request_for_proposals": {
+              "title": "Request-for-proposals",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "direct_contracting": {
+              "title": "Direct contracting by outcome funder/investor/intermediary",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "provider_led_development": {
+              "title": "Provider-led deal development",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "other": {
+              "title": "Other",
+              "$ref": "#/definitions/object_with_value_string"
+            },
+            "status": {
+              "title": "(Status)",
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "misc6": {
+      "type": "object",
+      "properties": {
+        "feasibility_study": {
+          "title": "Feasibility study",
+          "description": "Was a feasibility study conducted?",
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "(Value)",
+              "type": "string",
+              "enum": [
+                "Yes",
+                "No"
+              ]
+            },
+            "status": {
+              "title": "(Status)",
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "misc7": {
+      "type": "object",
+      "properties": {
+        "proposed_financing_instruments": {
+          "title": "Proposed financing instruments",
+          "type": "object",
+          "properties": {
+            "debt": {
+              "title": "Debt",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "equity": {
+              "title": "Equity",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "guarantee": {
+              "title": "Guarantee",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "grant": {
+              "title": "Grant",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "other": {
+              "title": "Other",
+              "$ref": "#/definitions/object_with_value_string"
+            },
+            "status": {
+              "title": "(Status)",
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "technical_assistance_grant_development": {
+      "title": "Technical assistance grant",
+      "description": "Was a technical assistance grant awarded to cover all or a portion of development costs?",
+      "type": "object",
+      "properties": {
+        "main": {
+          "title": "Technical assistance grant",
+          "$ref": "#/definitions/object_with_value_yes_no_and_status"
+        },
+        "details": {
+          "title": "Details",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "description": "-",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "description": "-",
+          "type": "string"
+        }
+      }
+    },
+    "overall_project_finance": {
+      "title": "Overall project finance",
+      "type": "object",
+      "properties": {
+        "maximum_potential_outcome_payment_v2": {
+          "title": "Estimated Maximum potential outcome payment",
+          "description": "Total estimated maximum payments for outcomes from outcome funders.",
+          "type": "object",
+          "properties": {
+            "currency": {
+              "title": "Currency",
+              "description": "",
+              "$ref": "#/definitions/object_with_value_string_and_status"
+            },
+            "amount": {
+              "title": "Amount",
+              "description": "",
+              "$ref": "#/definitions/object_with_value_number_and_status"
+            }
+          }
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "purpose_and_classifications": {
+      "title": "Purpose and classifications",
+      "type": "object",
+      "properties": {
+        "social_challenge": {
+          "title": "Social/Developmental challenge",
+          "description": "Broad definition of the social and/or developmental challenges that the project addresses.",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "intervention": {
+          "title": "Expected intervention model",
+          "description": "The initial expected intervention model that the project aims to put in place.",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "policy_sector": {
+          "title": "Policy sector",
+          "description": "Main policy sector in which the project is based.",
+          "type": "object",
+          "properties": {
+            "employment_and_private_sector_development": {
+              "title": "Employment and private sector development",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "education": {
+              "title": "Education",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "social_protection": {
+              "title": "Social protection",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "criminal_justice": {
+              "title": "Criminal justice",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "health": {
+              "title": "Health",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "agriculture": {
+              "title": "Agriculture",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "environment_and_climate_change": {
+              "title": "Environment and climate change",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "water_sanitation_hygiene": {
+              "title": "Water, Sanitation and Hygiene",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "energy": {
+              "title": "Energy",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "humanitarian": {
+              "title": "Humanitarian",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "other": {
+              "title": "Other",
+              "$ref": "#/definitions/object_with_value_string"
+            },
+            "status": {
+              "title": "(Status)",
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
+        "primary_sdg_goal": {
+          "title": "Primary SDG goal",
+          "description": "Primary Sustainable Development Goal (SDG) in which the project is based. To be selected from the 17 SDGs defined in the United Nations 2030 Agenda (2015) https://sdgs.un.org/2030agenda. [This is at the project level. This is also captured at the outcome level]",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "secondary_sdg_goals": {
+          "title": "Secondary SDG goals",
+          "description": "Secondary Sustainable Development Goal (SDG) in which the project is based. Primary SDG Goal must not be included in this variable. [This is at the project level. This is also captured at the outcome level]",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "primary_sdg_target": {
+          "title": "Primary SDG target",
+          "description": "This variable identifies what primary SGD target the project is addressing. See United Nations 2030 Agenda (2015)  https://sdgs.un.org/2030agenda. [This is at the project level. This is also captured at the outcome level]",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "secondary_sdg_targets": {
+          "title": "Secondary SDG targets",
+          "description": "This variable identifies what secondary SGD target the project is addressing. Primary SDG target must not be included in this variable. See United Nations 2030 Agenda (2015)  https://sdgs.un.org/2030agenda. [This is at the project level. This is also captured at the outcome level]",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "service_and_beneficiaries": {
+      "title": "Service and beneficiaries",
+      "type": "object",
+      "properties": {
+        "target_population": {
+          "title": "Target population",
+          "description": "Description of the population targeted by the project and any eligibility requirement for the cohort of people who are to be offered support.",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "targeted_number_service_users_or_beneficiaries_total": {
+          "title": "Targeted number of unique service users or beneficiaries (total)",
+          "description": "Intended number of individuals in the target population who will be engaged in the service/intervention and/or whose social outcomes will be evaluated for outcome contract payment calculation.",
+          "$ref": "#/definitions/object_with_value_number_and_status"
+        },
+        "unit_type_targeted_service_users_or_beneficiaries": {
+          "title": "Unit type of targeted service users or beneficiaries",
+          "description": "Description of the unit of measurement that is used to account for targeted service users or beneficiaries.",
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "(Value)",
+              "type": "string",
+              "enum": [
+                "Individual",
+                "Other"
+              ]
+            },
+            "status": {
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
+        "unit_description_of_service_user_or_beneficiaries": {
+          "title": "Unit description of targeted service user or beneficiaries",
+          "description": "This field will only be completed if the answer to the last variable was “other”. This variable identifies what type of unit of measurement is used to account for targeted service users or beneficiaries.",
+          "$ref": "#/definitions/object_with_value_string_and_status"
+        },
+        "source_ids": {
+          "title": "(Source ID's)",
+          "type": "string"
+        },
+        "notes": {
+          "title": "(Notes)",
+          "type": "string"
+        }
+      }
+    },
+    "notes": {
+      "title": "Notes",
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string"
+        },
+        "status": {
+          "title": "(Status)",
+          "type": "string"
+        }
+      }
+    },
+    "delivery_locations": {
+      "title": "Delivery Locations",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "service_provision_id": {
+            "title": "Service Provision ID",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "location_name": {
+            "title": "Location - Name",
+            "description": "Name of the city or region where services are provided.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "location_postcode": {
+            "title": "Location - Postcode",
+            "description": "Postal code of the location where services are provided.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "location_country": {
+            "title": "Location - Country",
+            "description": "Country where services are provided.",
+            "$ref": "#/definitions/object_with_value_country"
+          },
+          "lat_lng": {
+            "title": "Lat/Lng",
+            "description": "Latitude and longitude coordinates. GO Lab will add or double check this variable. This variable feeds into the map(s) on the GO Lab website.",
+            "type": "object",
+            "properties": {
+              "lat": {
+                "title": "Lat",
+                "$ref": "#/definitions/object_with_value_number"
+              },
+              "lng": {
+                "title": "Lng",
+                "$ref": "#/definitions/object_with_value_number"
+              }
+            }
+          },
+          "adminstrative_geography_name": {
+            "title": "Adminstrative geography - Name",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "adminstrative_geography_code_type": {
+            "title": "Adminstrative geography - Code Type",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "adminstrative_geography_code": {
+            "title": "Adminstrative geography - Code",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "source_ids": {
+            "title": "Sources",
+            "type": "string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sources": {
+      "title": "Sources",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Id",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the GO Lab analyst.",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "description": "Name of the person or institution who shared information about this project.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "type": {
+            "title": "Type",
+            "description": "Type of source of information.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "publishing_organisation_ids": {
+            "title": "Publishing Organisations",
+            "description": "Organisation that published the evaluation, report, document or website that is cited as a source.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "url": {
+            "title": "URL",
+            "description": "URL of the document about this project.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "archive_url": {
+            "title": "Archive URL",
+            "description": "A preserved copy of an online source that can be accessed if the original page is moved, changes, or disappears.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "internal_url": {
+            "title": "Internal URL",
+            "description": "",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "publication_date": {
+            "title": "Publication Date",
+            "description": "Date when the information about this project was published.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "accessed_date": {
+            "title": "Accessed Date",
+            "description": "Date when the information about this project was accessed.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "service_provisions": {
+      "title": "Service Provisions",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Id",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the analyst.",
+            "type": "string"
+          },
+          "organisation_id": {
+            "title": "Organisation ID",
+            "description": "INDIGO identifier of the organisation that provides services for this impact bond project. See INDIGO Identifiers section.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "organisation_role_category": {
+            "title": "Organisation Role Category",
+            "description": "Category of service provider.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Nonprofit/NGO",
+                  "Foundation/Philanthropist",
+                  "Government/Public Sector/Public Bank",
+                  "For-profit",
+                  "Other"
+                ]
+              }
+            }
+          },
+          "intervention": {
+            "title": "Intervention",
+            "description": "Description of the intervention or the activities that service providers are funded to address the social challenge.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "planned_service": {
+            "title": "Planned Service",
+            "type": "object",
+            "properties": {
+              "start_date": {
+                "title": "Start",
+                "description": "Expected date when service delivery starts.",
+                "$ref": "#/definitions/object_with_value_string"
+              },
+              "end_date": {
+                "title": "End",
+                "description": "Expected date when service delivery ends.",
+                "$ref": "#/definitions/object_with_value_string"
+              }
+            }
+          },
+          "source_ids": {
+            "title": "Sources",
+            "type": "string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "outcome_payment_commitments": {
+      "title": "Outcome Payment Commitments",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "organisation_id": {
+            "title": "Organisation ID",
+            "description": "INDIGO identifier of the organisation that pays for social outcomes in this impact bond project. See INDIGO Identifiers section.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "organisation_role_category": {
+            "title": "Organisation Role Category",
+            "description": "Category of outcome payer",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Nonprofit/NGO",
+                  "Foundation/Philanthropist",
+                  "Government/Public Sector/Public Bank",
+                  "Multilateral/Bilateral/Intergovernmental Financial Institution",
+                  "Corporate Giving",
+                  "Investment Fund",
+                  "Other"
+                ]
+              }
+            }
+          },
+          "maximum_potential_outcome_payment": {
+            "title": "Maximum potential Outcome payment",
+            "type": "object",
+            "properties": {
+              "currency": {
+                "title": "Currency",
+                "description": "Total maximum payments for outcomes from each outcome payer. Currency.",
+                "$ref": "#/definitions/object_with_value_string_and_status"
+              },
+              "amount": {
+                "title": "Amount",
+                "description": "Total maximum payments for outcomes from each outcome payer.",
+                "$ref": "#/definitions/object_with_value_number"
+              },
+              "amount_usd": {
+                "title": "Amount USD",
+                "description": "Total maximum payments for outcomes from each outcome payer. In USD.",
+                "$ref": "#/definitions/object_with_value_number"
+              }
+            }
+          },
+          "result_type": {
+            "title": "Result type",
+            "description": "This variable specifies whether a result is interim or over all (final).",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Interim",
+                  "Overall"
+                ]
+              }
+            }
+          },
+          "period": {
+            "title": "Period",
+            "type": "object",
+            "properties": {
+              "start_date": {
+                "title": "Start",
+                "description": "This variable provides the start date of the performance period.",
+                "$ref": "#/definitions/object_with_value_date"
+              },
+              "end_date": {
+                "title": "End",
+                "description": "This variable provides the end date of the performance period.",
+                "$ref": "#/definitions/object_with_value_date"
+              }
+            }
+          },
+          "total_outcome_payments": {
+            "title": "Total outcome payments made",
+            "type": "object",
+            "properties": {
+              "currency": {
+                "title": "Currency",
+                "description": "Currency in which outcome payments are reported for this project.",
+                "$ref": "#/definitions/object_with_value_string_and_status"
+              },
+              "amount": {
+                "title": "Amount",
+                "description": "Total actual payments for outcomes disbursed by outcome payers in relevant local currency.",
+                "$ref": "#/definitions/object_with_value_number"
+              },
+              "amount_usd": {
+                "title": "Amount USD",
+                "description": "Total actual payments for outcomes disbursed by outcome payers in USD.",
+                "$ref": "#/definitions/object_with_value_number"
+              }
+            }
+          },
+          "source_ids": {
+            "title": "Sources",
+            "type": "string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "investments": {
+      "title": "Investments",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Id",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the GO Lab analyst.",
+            "type": "string"
+          },
+          "organisation_id": {
+            "title": "Organisation ID",
+            "description": "INDIGO identifier for the organisation that invested upfront capital for this project. See INDIGO Identifiers section.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "organisation_role_category": {
+            "title": "Organisation Role Category",
+            "description": "",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Nonprofit/NGO",
+                  "Foundation/Philanthropist",
+                  "Government/Public Sector/Public Bank",
+                  "Multilateral/Bilateral/Intergovernmental Financial Institution",
+                  "Corporate Giving",
+                  "Investment Fund",
+                  "High Net Worth Individual/Family Office/Private Bank",
+                  "Impact Investor",
+                  "Commercial"
+                ]
+              }
+            }
+          },
+          "investment_commitment": {
+            "title": "Investment Commitment",
+            "type": "object",
+            "properties": {
+              "currency": {
+                "title": "Currency",
+                "description": "Currency in which investments are reported for this project.",
+                "$ref": "#/definitions/object_with_value_string"
+              },
+              "amount": {
+                "title": "Amount",
+                "type": "object",
+                "properties": {
+                  "min": {
+                    "title": "Min",
+                    "description": "When it is not possible to share exact amounts, projects can share a range with minimum and maximum amount of investment committed by each investor.",
+                    "$ref": "#/definitions/object_with_value_number"
+                  },
+                  "exact": {
+                    "title": "Exact",
+                    "description": "Exact amount of committed investment from each investor.",
+                    "$ref": "#/definitions/object_with_value_number"
+                  },
+                  "max": {
+                    "title": "Max",
+                    "description": "When it is not possible to share exact amounts, projects can share a range with minimum and maximum amount of investment committed by each investor.",
+                    "$ref": "#/definitions/object_with_value_number"
+                  }
+                }
+              },
+              "amount_usd": {
+                "title": "Amount USD",
+                "type": "object",
+                "properties": {
+                  "min": {
+                    "title": "Min",
+                    "description": "Minimum amount of investment committed by each investor in USD (when it is not possible to have exact amount in USD).",
+                    "$ref": "#/definitions/object_with_value_number"
+                  },
+                  "exact": {
+                    "title": "Exact",
+                    "description": "Exact amount of investment committed by each investor in USD.",
+                    "$ref": "#/definitions/object_with_value_number"
+                  },
+                  "max": {
+                    "title": "Max",
+                    "description": "Maximum amount of investment committed by each investor in USD (when it is not possible to have exact amount in USD).",
+                    "$ref": "#/definitions/object_with_value_number"
+                  }
+                }
+              }
+            }
+          },
+          "maximum_potential_loss": {
+            "title": "Maximum Potential loss",
+            "description": "Percentage of principal that investors stand to lose in a worst-case scenario.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "maximum_potential_return_type": {
+            "title": "Maximum Potential Return Type",
+            "description": "This variable specifies whether the maximum potential return type is measured as average annual return or IRR.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "IRR",
+                  "Average annual return"
+                ]
+              }
+            }
+          },
+          "maximum_potential_return": {
+            "title": "Maximum Potential Return",
+            "description": "Percentage return that investors stand to gain in best case scenario.",
+            "$ref": "#/definitions/object_with_value_number"
+          },
+          "investor_repayment": {
+            "title": "Investor Repayment",
+            "description": "Extent to which investment and return was paid to investor.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "No repayment (no principle or return)",
+                  "Some repayment (but below value of principle)",
+                  "Principal repaid (but no net return)",
+                  "Principal + positive financial returns",
+                  "Not publicly available"
+                ]
+              }
+            }
+          },
+          "investment_type": {
+            "title": "Investment Type",
+            "description": "This variable identifies whether this investment qualifies as debt, equity or a combination of both.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Debt",
+                  "Equity",
+                  "Combination"
+                ]
+              }
+            }
+          },
+          "source_ids": {
+            "title": "Sources",
+            "type": "string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "intermediary_services": {
+      "title": "Intermediary services",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "organisation_id": {
+            "title": "Organisation ID",
+            "description": "INDIGO identifier for the organisation that provides intermediary services for this project. See INDIGO Identifiers section.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "organisation_role_category": {
+            "title": "Organisation Role Category",
+            "description": "The role(s) or key functions performed by each of the named intermediaries.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Impact bond design",
+                  "Financial and commercial modeling",
+                  "Impact bond investment structure",
+                  "Capital raise",
+                  "Loan arranger",
+                  "Performance management",
+                  "Legal counsel",
+                  "Technical assistance",
+                  "Other"
+                ]
+              }
+            }
+          },
+          "other_role_description": {
+            "title": "Other Role Description",
+            "description": "If an organization is providing a role that is not listed above, it can be listed in this field.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "source_ids": {
+            "title": "Sources",
+            "type": "string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "outcome_metrics": {
+      "title": "Outcome Metrics",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Id",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by any analyst. The outcome is what changes for an individual as the result of a service or intervention.",
+            "type": "string"
+          },
+          "definition": {
+            "title": "Outcome Definition",
+            "description": "An outcome target or metric is the specific value attached to the measure of outcomes for the purposes of determining whether satisfactory performance has been achieved. In an impact bond, these targets will usually determine whether a payment is made to the provider or investor. \n\nThis variable provides a detailed description of the metric(s) used to determine payments from the outcome payers. It should provide a clear definition of the conditions under which an outcome is agreed to have been 'achieved' or 'not achieved'.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "target_population": {
+            "title": "Target Population",
+            "description": "Description of the targeted population of beneficiaries or service users.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "targeted_number_of_service_users_or_beneficiaries_total": {
+            "title": "Targeted number of service users Or beneficiaries (total)",
+            "description": "Targeted number of beneficiaries/service users for each outcome metric",
+            "$ref": "#/definitions/object_with_value_number"
+          },
+          "unit_type_of_targeted_service_users_or_beneficiaries": {
+            "title": "Unit type of targeted Service users or beneficiaries",
+            "description": "Description of the unit of measurement that is used to account for targeted service users or beneficiaries.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Individual",
+                  "Other"
+                ]
+              }
+            }
+          },
+          "unit_description_of_service_user_or_beneficiaries": {
+            "title": "Unit description of Service user or beneficiaries",
+            "description": "This field will only be completed if the answer to the last variable was “other”. This variable identifies what type of unit of measurement is used to account for targeted service users or beneficiaries.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "outcome_metric_target": {
+            "$ref": "#/definitions/object_with_value_string",
+            "title": "Outcome metric target",
+            "description": "Targeted levels of outcome metrics to be achieved (e.g. the proportion of people supported who are expected to achieve a given outcome)"
+          },
+          "other_target_for_meeting_outcome_metric_target": {
+            "$ref": "#/definitions/object_with_value_string",
+            "title": "Other target for Meeting outcome metric target",
+            "description": "This variable identifies information about other/secondary targets that need to be met in order to achieve the outcome."
+          },
+          "outcome_validation_method": {
+            "$ref": "#/definitions/object_with_value_string",
+            "title": "Outcome validation Method",
+            "description": "The approach taken to assessing whether the specified outcomes have been achieved and the basis on which ‘outcome payments’ will be made. This could take the form of validated administrative data (for example in a rate card for youth engagement where young people achieve education outcomes, the production of these qualifications may be used as the basis of outcome payments) or a formal and independent impact evaluation (for example under a Randomised Control Trial or quasi-experimental study outcome payments are only made when the performance of the treatment group is significantly improved when compared to the control group). To be selected from: Randomised Control Trial; Quasi-experimental study; Historical comparison (e.g. comparison to historical benchmark); Pre-Post analysis  (measurement of outcomes for target individual or  cohort before and after intervention); Simple ex-post verification; Not available."
+          },
+          "data_source_for_outcome_validation": {
+            "$ref": "#/definitions/object_with_value_string",
+            "title": "Data source for Outcome validation",
+            "description": "The sources of information for outcome validation could be existing administrative data or new data collected."
+          },
+          "policy_sector": {
+            "title": "Policy sector",
+            "description": "Main policy sector in which the project is based.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "primary_sdg_goal": {
+            "title": "Primary SDG goal",
+            "description": "Primary Sustainable Development Goal (SDG) in which the project is based. To be selected from the 17 SDGs defined in the United Nations 2030 Agenda (2015) https://sdgs.un.org/2030agenda.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "secondary_sdg_goals": {
+            "title": "Secondary SDG goals",
+            "description": "Secondary Sustainable Development Goal (SDG) in which the project is based. Primary SDG Goal must not be included in this variable.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "primary_sdg_target": {
+            "title": "Primary SDG target",
+            "description": "This variable identifies what primary SGD target the project is addressing. See United Nations 2030 Agenda (2015)  https://sdgs.un.org/2030agenda.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "secondary_sdg_targets": {
+            "title": "Secondary SDG targets",
+            "description": "This variable identifies what secondary SGD target the project is addressing. Primary SDG target must not be included in this variable. See United Nations 2030 Agenda (2015)  https://sdgs.un.org/2030agenda.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "source_ids": {
+            "title": "Sources",
+            "type": "string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "documents": {
+      "title": "Documents",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "title": "Title",
+            "description": "Title of related document or case study.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "url": {
+            "title": "URL",
+            "description": "URL of related document or case study.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "object_with_value_string": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string"
+        }
+      }
+    },
+    "object_with_value_country": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "codelist": "countries.csv",
+          "codelistDescription": "A 2 character country code from ISO 3166. Eg: GB, US"
+        }
+      }
+    },
+    "object_with_value_number": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "number"
+        }
+      }
+    },
+    "object_with_value_date": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "pattern": "^[0-9][0-9][0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$",
+          "patternHint": "Enter a date in format YYYY, YYYY-MM or YYYY-MM-DD"
+        }
+      }
+    },
+    "object_with_value_yes_no": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "enum": [
+            "Yes",
+            "No"
+          ]
+        }
+      }
+    },
+    "object_with_value_string_and_status": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string"
+        },
+        "status": {
+          "title": "(Status)",
+          "type": "string",
+          "enum": [
+            "PUBLIC",
+            "PRIVATE",
+            "DISPUTED"
+          ]
+        }
+      }
+    },
+    "object_with_value_country_and_status": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "codelist": "countries.csv",
+          "codelistDescription": "A 2 character country code from ISO 3166. Eg: GB, US"
+        },
+        "status": {
+          "title": "(Status)",
+          "type": "string",
+          "enum": [
+            "PUBLIC",
+            "PRIVATE",
+            "DISPUTED"
+          ]
+        }
+      }
+    },
+    "object_with_value_number_and_status": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "number"
+        },
+        "status": {
+          "title": "(Status)",
+          "type": "string",
+          "enum": [
+            "PUBLIC",
+            "PRIVATE",
+            "DISPUTED"
+          ]
+        }
+      }
+    },
+    "object_with_value_date_and_status": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "pattern": "^[0-9][0-9][0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$",
+          "patternHint": "Enter a date in format YYYY, YYYY-MM or YYYY-MM-DD"
+        },
+        "status": {
+          "title": "(Status)",
+          "type": "string",
+          "enum": [
+            "PUBLIC",
+            "PRIVATE",
+            "DISPUTED"
+          ]
+        }
+      }
+    },
+    "object_with_value_yes_no_and_status": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "enum": [
+            "Yes",
+            "No"
+          ]
+        },
+        "status": {
+          "title": "(Status)",
+          "type": "string",
+          "enum": [
+            "PUBLIC",
+            "PRIVATE",
+            "DISPUTED"
+          ]
+        }
+      }
+    },
+    "status": {
+      "title": "(Status)",
+      "type": "string",
+      "enum": [
+        "PUBLIC",
+        "SANDBOX",
+        "PRIVATE",
+        "DISPUTED"
+      ]
+    },
+    "sandboxes": {
+      "title": "(In Sandboxes)",
+      "type": "string"
+    }
+  }
+}

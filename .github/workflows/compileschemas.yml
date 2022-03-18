@@ -18,3 +18,5 @@ jobs:
       run: "compiletojsonschema --codelist-base-directory schema/codelists schema/fund.json"
     - name: Compile Organisations
       run: "compiletojsonschema --codelist-base-directory schema/codelists schema/organisation.json"
+    - name: Compile Pipelines
+      run: "compiletojsonschema --codelist-base-directory schema/codelists schema/pipeline.json"
