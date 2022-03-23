@@ -135,7 +135,7 @@ Service and beneficiaries
 Delivery Locations
 ------------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+This is a list. One pipeline can have multiple items of data. One item of data is defined as:
 
 .. datadictionary::
    :schema: pipeline.json
@@ -145,7 +145,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Sources
 -------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+This is a list. One pipeline can have multiple items of data. One item of data is defined as:
 
 .. datadictionary::
    :schema: pipeline.json
@@ -157,14 +157,14 @@ Organisations
 
 When viewing data, variables from the organisation data model may be included to provide more information. See :doc:`the Organisation data dictionary <organisation>` for more information on what these variables mean.
 
-The organisations listed are those referenced in other parts of the project, such as :ref:`data-dictionary-pipeline-service-provisions`.
+The organisations listed are those referenced in other parts of the pipeline, such as :ref:`data-dictionary-pipeline-service-provisions`.
 
 .. _data-dictionary-pipeline-service-provisions:
 
 Service Provisions
 ------------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+This is a list. One pipeline can have multiple items of data. One item of data is defined as:
 
 
 
@@ -177,7 +177,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Outcome Payment Commitments
 ---------------------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+This is a list. One pipeline can have multiple items of data. One item of data is defined as:
 
 
 .. datadictionary::
@@ -188,7 +188,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Investments
 -----------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+This is a list. One pipeline can have multiple items of data. One item of data is defined as:
 
 
 
@@ -200,7 +200,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Intermediary services
 ---------------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+This is a list. One pipeline can have multiple items of data. One item of data is defined as:
 
 
 
@@ -211,7 +211,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Outcome Metrics
 ---------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+This is a list. One pipeline can have multiple items of data. One item of data is defined as:
 
 
 
@@ -222,7 +222,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Documents
 ---------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+This is a list. One pipeline can have multiple items of data. One item of data is defined as:
 
 
 
