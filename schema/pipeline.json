@@ -809,9 +809,8 @@
             "type": "string"
           },
           "organisation_id": {
-            "title": "Organisation ID",
             "description": "INDIGO identifier of the organisation that provides services for this impact bond project. See INDIGO Identifiers section.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
@@ -874,9 +873,8 @@
         "type": "object",
         "properties": {
           "organisation_id": {
-            "title": "Organisation ID",
             "description": "INDIGO identifier of the organisation that pays for social outcomes in this impact bond project. See INDIGO Identifiers section.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
@@ -998,9 +996,8 @@
             "type": "string"
           },
           "organisation_id": {
-            "title": "Organisation ID",
             "description": "INDIGO identifier for the organisation that invested upfront capital for this project. See INDIGO Identifiers section.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
@@ -1160,7 +1157,7 @@
           "organisation_id": {
             "title": "Organisation ID",
             "description": "INDIGO identifier for the organisation that provides intermediary services for this project. See INDIGO Identifiers section.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
@@ -1350,7 +1347,8 @@
               "value": {
                 "title": "Id of project",
                 "description": "An Id of a project that was created as a result of this pipeline",
-                "type": "string"
+                "type": "string",
+                "references-model": "project"
               }
             }
           },
@@ -1421,6 +1419,17 @@
             "Yes",
             "No"
           ]
+        }
+      }
+    },
+    "object_with_value_organisation_reference": {
+      "title": "Organisation ID",
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "references-model": "organisation"
         }
       }
     },

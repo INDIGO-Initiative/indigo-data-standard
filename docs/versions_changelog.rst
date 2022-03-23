@@ -30,6 +30,8 @@ Unreleased
 
 New Pipeline model
 
+Add non standard "references-model" and "references-models-seperator" keys to JSON Schema for links between models.
+
 
 2.3.0 - 2022-03-18
 ~~~~~~~~~~~~~~~~~~

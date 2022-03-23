@@ -697,9 +697,8 @@
             "type": "string"
           },
           "organisation_id": {
-            "title": "Organisation ID",
             "description": "INDIGO identifier of the organisation that provides services for this impact bond project. See INDIGO Identifiers section.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
@@ -795,9 +794,8 @@
         "type": "object",
         "properties": {
           "organisation_id": {
-            "title": "Organisation ID",
             "description": "INDIGO identifier of the organisation that pays for social outcomes in this impact bond project. See INDIGO Identifiers section.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
@@ -936,9 +934,8 @@
             "type": "string"
           },
           "organisation_id": {
-            "title": "Organisation ID",
             "description": "INDIGO identifier for the organisation that invested upfront capital for this project. See INDIGO Identifiers section.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
@@ -1099,7 +1096,7 @@
           "organisation_id": {
             "title": "Organisation ID",
             "description": "INDIGO identifier for the organisation that provides intermediary services for this project. See INDIGO Identifiers section.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "organisation_role_category": {
             "title": "Organisation Role Category",
@@ -1349,12 +1346,12 @@
           "sending_organisation_id": {
             "title": "Sending Organisation ID",
             "description": "INDIGO ID of the organisation that makes the transaction.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "receiving_organisation_id": {
             "title": "Receiving Organisation ID",
             "description": "INDIGO ID of the organisation that receives the transaction. ",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "transaction_type": {
             "title": "Transaction Type",
@@ -1451,12 +1448,12 @@
           "funding_organisation_id": {
             "title": "Funding Organisation Id",
             "description": "Id of the organization that pays for technical assistance.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "recipient_organisation_id": {
             "title": "Recipient Organisation Id",
             "description": "Id of the organization that receives technical assistance. ",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "currency": {
             "title": "Currency",
@@ -1722,7 +1719,7 @@
           "outcomes_validator_organisation_ids": {
             "title": "Outcomes validator(s)",
             "description": "Name(s) of organization(s) responsible for validating the achievement of outcomes or otherwise assessing the metrics underpinning outcome payments. One outcome can have two or more validators.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_references_comma_separated"
           },
           "evaluation_documents_source_ids": {
             "title": "Evaluation Documents",
@@ -1857,12 +1854,12 @@
           "payer_organisation_id": {
             "title": "Payer Organisation ID",
             "description": "INDIGO ID of organisation that is paying for outcomes.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "recipient_organisation_id": {
             "title": "Recipient Organisation ID",
             "description": "INDIGO ID of organisation that is receiving payment for outcomes.",
-            "$ref": "#/definitions/object_with_value_string"
+            "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "type": {
             "title": "Type",
@@ -2016,6 +2013,29 @@
           "type": "string",
           "pattern": "^[0-9][0-9][0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$",
           "patternHint": "Enter a date in format YYYY, YYYY-MM or YYYY-MM-DD"
+        }
+      }
+    },
+    "object_with_value_organisation_reference": {
+      "title": "Organisation ID",
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "references-model": "organisation"
+        }
+      }
+    },
+    "object_with_value_organisation_references_comma_separated": {
+      "title": "Organisation ID",
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string",
+          "references-model": "organisation",
+          "references-models-seperator": ","
         }
       }
     },
