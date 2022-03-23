@@ -229,3 +229,14 @@ This is a list. One project can have multiple items of data. One item of data is
 .. datadictionary::
    :schema: pipeline.json
    :path: /properties/documents/items
+
+Projects
+--------
+
+This is a list. One pipeline can have multiple items of data. One item of data is defined as:
+
+
+
+.. datadictionary::
+   :schema: pipeline.json
+   :path: /properties/projects/items

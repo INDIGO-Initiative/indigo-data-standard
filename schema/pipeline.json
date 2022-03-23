@@ -1337,6 +1337,37 @@
           }
         }
       }
+    },
+    "projects": {
+      "title": "Projects",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "Id of project",
+                "description": "An Id of a project that was created as a result of this pipeline",
+                "type": "string"
+              }
+            }
+          },
+          "source_ids": {
+            "title": "Sources",
+            "type": "string"
+          },
+          "notes": {
+            "title": "Notes",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          }
+        }
+      }
     }
   },
   "definitions": {
