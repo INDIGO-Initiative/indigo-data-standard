@@ -93,7 +93,7 @@
               "title": "(Value)",
               "type": "string",
               "enum": [
-                "Scoping (e.g. pre-feasibility study to support market mapping and issue identification)  ",
+                "Scoping (e.g. pre-feasibility study to support market mapping and issue identification)",
                 "Early stage (e.g. beginning a feasibility study)",
                 "Late stage (e.g. final deal construction and placement)",
                 "Final negotiations"
