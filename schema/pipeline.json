@@ -643,6 +643,33 @@
           "description": "This field will only be completed if the answer to the last variable was “other”. This variable identifies what type of unit of measurement is used to account for targeted service users or beneficiaries.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
+        "country_classification": {
+          "title": "Country Classification of Service and beneficiaries",
+          "description": "Use classifications from World Bank https://datahelpdesk.worldbank.org/knowledgebase/articles/906519 . Use classifications  at the moment of inputting the data.",
+          "type": "object",
+          "properties": {
+            "low_income": {
+              "title": "Low-income",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "lower_middle_income": {
+              "title": "Lower-middle-income",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "upper_middle_income": {
+              "title": "Upper-middle-income",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "high_income": {
+              "title": "High-income",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
+            "status": {
+              "title": "(Status)",
+              "$ref": "#/definitions/status"
+            }
+          }
+        },
         "source_ids": {
           "title": "(Source ID's)",
           "type": "string"
