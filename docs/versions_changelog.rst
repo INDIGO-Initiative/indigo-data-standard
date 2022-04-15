@@ -30,6 +30,8 @@ Unreleased
 
 New Pipeline model
 
+Changes to Project descriptions after `a review and consultation process <https://golab.bsg.ox.ac.uk/community/news/have-your-say-with-the-impact-bond-dataset-data-definitions/>`_. This does not change the meaning of any variables, only adds examples, clarifies some definitions and includes descriptions for the 'Sources' and "Notes' variables.
+
 Add non standard "references-model" and "references-models-seperator" keys to JSON Schema for links between models.
 
 

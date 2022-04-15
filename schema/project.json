@@ -27,12 +27,13 @@
     },
     "stage_development": {
       "title": "Stage of Development",
-      "description": "Stage of development of the project at the moment of data collection.",
+      "description": "Latest known stage of development of the project.",
       "type": "object",
       "properties": {
         "value": {
           "title": "(Value)",
           "type": "string",
+          "description": "Codelist options are: Contracted (A project falls under the category of ‘contracted’ when key stakeholders have signed a contract but service provision has not started yet), Implementation (A project falls under the category of ‘implementation’ when service provision has started.), Service delivery complete (A project falls under the category of ‘complete service delivery’ when service provision has finished) or Complete (A project falls under the category of ‘complete’ when service provision has finished, and all outcome payments have been made)",
           "enum": [
             "Early-stage design",
             "Late-stage design",
@@ -44,6 +45,7 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for stage of development.",
           "type": "string"
         },
         "status": {
@@ -59,6 +61,7 @@
       "properties": {
         "value": {
           "title": "(Value)",
+          "description": "If the project has a ‘YES’ in this variable, it has data for the Social Investment Prototype tabs.",
           "type": "string",
           "enum": [
             "YES",
@@ -109,11 +112,13 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
-          "type": "string"
+          "type": "string",
+          "description": "Source of information for variables about dates."
         },
         "notes": {
           "title": "(Notes)",
-          "type": "string"
+          "type": "string",
+          "description": "Notes on key dates of the project."
         }
       },
       "priority": 1
@@ -129,11 +134,13 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for jurisdiction.",
           "type": "string"
         },
         "notes": {
           "title": "(Notes)",
-          "type": "string"
+          "type": "string",
+          "description": "Notes on jurisdiction."
         }
       },
       "priority": 1
@@ -157,17 +164,17 @@
               "properties": {
                 "min": {
                   "title": "Min",
-                  "description": "When it is not possible to share the exact amount of total investment, projects can present a range with minimun and maximum values.",
+                  "description": "Some projects do not have an exact figure for investment commitment at the beginning of implementation. Some projects can access further capital as the project moves forward. In these cases, projects can share a range of minimum and maximum values of investment commitment. This variable captures the lower value of the range in the currency of the project.",
                   "$ref": "#/definitions/object_with_value_number_and_status"
                 },
                 "exact": {
                   "title": "Exact",
-                  "description": "Total investment amount committed by investors (capital raised), as contractually agreed. Note that this should not include any recycled outcome payments.", 
+                  "description": "Total investment amount committed by investors (upfront capital raised), as contractually agreed. Note that this should not include any recycled outcome payments.",
                   "$ref": "#/definitions/object_with_value_number_and_status"
                 },
                 "max": {
                   "title": "Max",
-                  "description": "When it is not possible to share the exact amount of total investment, projects can present a range with minimun and maximum values.",  
+                  "description": "Some projects do not have an exact figure for investment commitment at the beginning of implementation. Some projects can access further capital as the project moves forward. In these cases, projects can share a range of minimum and maximum values of investment commitment. This variable captures the higher value of the range in the currency of the project.",
                   "$ref": "#/definitions/object_with_value_number_and_status"
                 }
               }
@@ -197,7 +204,7 @@
         },
         "maximum_potential_outcome_payment_v2": {
           "title": "Maximum potential outcome payment",
-          "description": "Total maximum payments for outcomes from outcome funders. This should be equal to \"contract cap\".",
+          "description": "Currency in which maximum potential outcome payments are reported for this project.",
           "type": "object",
           "properties": {
             "currency": {
@@ -207,12 +214,12 @@
             },
             "amount": {
               "title": "Amount",
-              "description": "",
+              "description": "Total maximum payments for outcomes from outcome funders. This should be equal to “contract cap”.",
               "$ref": "#/definitions/object_with_value_number_and_status"
             },
             "amount_usd": {
               "title": "Amount USD",
-              "description": "",
+              "description": "Total maximum payments for outcomes from outcome funders in US dollars.",
               "$ref": "#/definitions/object_with_value_number_and_status"
             }
           }
@@ -234,12 +241,12 @@
         },
         "configuration_contracting_parties": {
           "title": "Configuration of the Contracting Parties",
-          "description": "A description of the bilateral or multilateral relationship between contracting parties. It identifies which party/parties hold the contract with the outcome funder (or which actor has majority control of a contract-holding Special Purpose Vehicle).",
+          "description": "A description of the bilateral or multilateral relationship between contracting parties. It identifies which party/parties hold the contract with the outcome funder (or which actor has majority control of a contract-holding Special Purpose Vehicle). This variable does not have a codelist, but these are some suggested options: Managed structure (bilateral outcomes contract between outcomes payer and intermediary organisation or intermediary-owned SPV), Intermediated structure (bilateral outcomes contract between outcomes payer and investor organisation, or investor-owned SPV), Direct structure (bilateral outcomes contract between outcomes payer and service provider or service provider-owned SPV), Framework structure (multilateral contract where multiple parties – provider, investor and/or intermediary – are all direct parties to the same outcomes contract with the outcome payer).",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "investor_repayment": {
           "title": "Investor repayment",
-          "description": "To be completed at the end of the project. Extent to which investment and return was paid to investor.",
+          "description": "To be completed at the end of the project. Extent to which investment and return was paid to investor. Suggested options are: no repayment (no principal or return), some repayment (but below value of principal), principal repaid (but no net return), principal and postivie net financial returns or not publicly available.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "total_outcome_payments_made": {
@@ -258,17 +265,19 @@
             },
             "amount_usd": {
               "title": "Amount USD",
-              "description": "Total actual payments for outcomes disbursed by outcome payers in USD. This will be calculated by GO Lab staff.",
+              "description": "To be completed at the end of the project. Total actual payments for outcomes disbursed by outcome payers in US dollars.",
               "$ref": "#/definitions/object_with_value_number_and_status"
             }
           }
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for financial and outcomes payments data.",
           "type": "string"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on financial and outcomes payments data.",
           "type": "string"
         }
       },
@@ -286,26 +295,26 @@
               "title": "Latest",
               "type": "object",
               "properties": {
-                 "currency": {
-                    "title": "Currency",
-                    "description": "The currency of the investment data provided.",
-                    "$ref": "#/definitions/object_with_value_string_and_status"
-                  },
-                  "amount": {
-                    "title": "Amount",
-                    "description": "The total invested amount to date.",
-                    "$ref": "#/definitions/object_with_value_number_and_status"
-                  },
-                  "amount_usd": {
-                    "title": "Amount USD",
-                    "description": "To be calculated by GO Lab staff using the year in the above date and World Bank data available online at https://data.worldbank.org/indicator/PA.NUS.FCRF [Note that this variable does not capture and may misrepresent fluctuations over different years. This is an issue being tackled in the prototyping process.]",
-                    "$ref": "#/definitions/object_with_value_number_and_status"
-                  },
-                  "date": {
-                    "title": "Date",
-                    "description": "The date.",
-                    "$ref": "#/definitions/object_with_value_date_and_status"
-                  }
+                "currency": {
+                  "title": "Currency",
+                  "description": "Currency in which investment details are reported for this project.",
+                  "$ref": "#/definitions/object_with_value_string_and_status"
+                },
+                "amount": {
+                  "title": "Amount",
+                  "description": "The total amount of funds invested up to date.",
+                  "$ref": "#/definitions/object_with_value_number_and_status"
+                },
+                "amount_usd": {
+                  "title": "Amount USD",
+                  "description": "Total amount of funds invested up to date in USD. The GO Lab team does the conversion using the exchange rates provided by the World Bank. [Note that this variable does not capture and may misrepresent fluctuations over different years. This is an issue being tackled in the prototyping process.]",
+                  "$ref": "#/definitions/object_with_value_number_and_status"
+                },
+                "date": {
+                  "title": "Date",
+                  "description": "Latest date for which investment details are reported.",
+                  "$ref": "#/definitions/object_with_value_date_and_status"
+                }
               }
             }
           }
@@ -316,27 +325,29 @@
           "properties": {
             "target": {
               "title": "Target",
-              "description": "The targeted rate of return of an investment on the project after all costs have been considered, to determine profitability (net IRR)",
+              "description": "The targeted rate of return of an investment on the project, after all costs have been considered, to determine profitability (this value should be equal to net IRR).",
               "$ref": "#/definitions/object_with_value_string_and_status"
             },
             "latest": {
               "title": "Latest",
-              "description": "The latest actual rate of return of an investment on the project after all costs have been considered, to determine profitability. Reported as date below. If actual IRR is not being reported seek to indicate if Actual IRR exceeds Target IRR (yes/no)",
+              "description": "The latest actual rate of return of an investment on the project after all costs have been considered, to determine profitability. Reported as date below. If actual IRR is not being reported seek to indicate if Actual IRR exceeds Target IRR (yes/no).",
               "$ref": "#/definitions/object_with_value_string_and_status"
             },
             "date": {
               "title": "Date",
-              "description": "Date",
+              "description": "Latest date for which actual/latest internal rate of return is reported.",
               "$ref": "#/definitions/object_with_value_date_and_status"
             }
           }
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Sources of information about investment details.",
           "type": "string"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on investment details.",
           "type": "string"
         }
       },
@@ -348,7 +359,7 @@
       "properties": {
         "social_challenge": {
           "title": "Social challenge",
-          "description": "Broad definition of the social challenges that the project addresses.",
+          "description": "Broad definition of the social challenges that the project aims to address.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "intervention": {
@@ -399,10 +410,12 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for purpose and classifications data.",
           "type": "string"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on purpose and classifications of this project.",
           "type": "string"
         }
       },
@@ -442,12 +455,12 @@
         },
         "unit_description_of_service_user_or_beneficiaries": {
           "title": "Unit description of targeted service user or beneficiaries",
-          "description": "This field will only be completed if the answer to the last variable was “other”. This variable identifies what type of unit of measurement is used to account for targeted service users or beneficiaries.",
+          "description": "This field will only be completed if the answer to the last variable was “other”. This variable identifies what type of unit of measurement is used to account for targeted service users or beneficiaries. Examples of other units of measurements could be families, villages, etc.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "actual_number_service_users_or_beneficiaries_total": {
           "title": "Actual number of unique service users or beneficiaries engaged (total)",
-          "description": "Effective number of service users after the project was completed. The actual number of service users may differ from the targeted number, as forecasted at the beginnings of the project.", 
+          "description": "To be completed at the end of the project or when service delivery is complete. Effective number of service users after the project was completed. The actual number of service users may differ from the targeted number, as forecasted at the beginnings of the project.",
           "$ref": "#/definitions/object_with_value_number_and_status"
         },
         "unit_type_actual_service_users_or_beneficiaries": {
@@ -456,7 +469,7 @@
           "properties": {
             "value": {
               "title": "(Value)",
-              "description": "Description of the unit of measurement that is used to account for targeted service users or beneficiaries.",
+              "description": "To be completed at the end of the project or when service delivery is complete. Description of the unit of measurement that is used to account for targeted service users or beneficiaries. Codelist options are.",
               "type": "string",
               "enum": [
                 "Individual",
@@ -470,15 +483,17 @@
         },
         "unit_description_of_actual_service_user_or_beneficiaries": {
           "title": "Unit description of actual service user or beneficiaries engaged",
-          "description": "This field will only be completed if the answer to the last variable was “other”. This variable identifies what type of unit of measurement is used to account for actual number of service users or beneficiaries.",
+          "description": "To be completed at the end of the project. This field will only be completed if the answer to the last variable was “other”. This variable identifies what type of unit of measurement is used to account for actual number of service users or beneficiaries. Examples of other unit of measurements could be families, villages, etc.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for service users' data.",
           "type": "string"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on service users' data.",
           "type": "string"
         }
       },
@@ -500,6 +515,7 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for COVID-19 changes in projects.",
           "type": "string"
         },
         "status": {
@@ -532,16 +548,18 @@
         "properties": {
           "id": {
             "title": "Id",
-            "description": "",
+            "description": "This variable captures the INDIGO unique identifier for outcomes funds. These identifiers are defined in the Outcomes Fund Dataset and taken from there.",
             "type": "string"
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about Outcomes Funds.",
             "type": "string"
           },
           "notes": {
             "title": "(Notes)",
             "title": "Notes",
+            "description": "Notes on Outcomes Funds.",
             "type": "string"
           },
           "status": {
@@ -561,6 +579,7 @@
         "properties": {
           "service_provision_id": {
             "title": "Service Provision ID",
+            "description": "The GO Lab team gives an identifier to the different service deliveries that are supported by the same impact bond project. For instance, if a project is providing a service in two different cities, the first service would be identified as ‘servicedelivery1’ and the second one would be ‘servicedelivery2’.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "location_name": {
@@ -575,7 +594,7 @@
           },
           "location_country": {
             "title": "Location - Country",
-            "description": "Country where services are provided.",
+            "description": "Country where services are provided. Countries must be expressed using the ISO 3166 codelist, which contains a 2-character country code for every country (Eg: GB, US, etc.).",
             "$ref": "#/definitions/object_with_value_country"
           },
           "lat_lng": {
@@ -585,10 +604,12 @@
             "properties": {
               "lat": {
                 "title": "Lat",
+                "description": "Latitude coordinates must be expressed in decimals (degrees will not work). The GO Lab team will add or double check this variable. This variable feeds into the map(s) on the GO Lab website.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "lng": {
                 "title": "Lng",
+                "description": "Longitude coordinates must be expressed in decimals (degrees will not work). The GO Lab team will add or double check this variable. This variable feeds into the map(s) on the GO Lab website.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
@@ -607,10 +628,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about delivery locations.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on delivery locations.",
             "type": "string"
           },
           "status": {
@@ -629,7 +652,7 @@
         "properties": {
           "id": {
             "title": "Id",
-            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the GO Lab analyst.",
+            "description": "A within-project original, flexible identifier to be referenced in another sheet. The GO Lab team will enumerate sources using names such as ‘source1’, ‘source2’, ‘source3’.",
             "type": "string"
           },
           "name": {
@@ -644,12 +667,12 @@
           },
           "publishing_organisation_ids": {
             "title": "Publishing Organisations",
-            "description": "Organisation that published the evaluation, report, document or website that is cited as a source.",
+            "description": "Organisation that published the evaluation, report or website (etc.) that is cited as a source. If there are many organisations jointly publishing a document, they should all be separated by commas.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "url": {
             "title": "URL",
-            "description": "URL of the document about this project.",
+            "description": "URL of the document about this project, if there is one.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "archive_url": {
@@ -674,6 +697,7 @@
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on sources of information.",
             "type": "string"
           },
           "status": {
@@ -693,7 +717,7 @@
         "properties": {
           "id": {
             "title": "Id",
-            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the analyst.",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This will be set by the GO Lab team. These names could be ‘serviceprovider1’, ‘serviceprovider2’, etc.",
             "type": "string"
           },
           "organisation_id": {
@@ -773,10 +797,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about service provision.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on service provision.",
             "type": "string"
           },
           "status": {
@@ -833,14 +859,14 @@
               },
               "amount_usd": {
                 "title": "Amount USD",
-                "description": "Total maximum payments for outcomes from each outcome payer. In USD.",
+                "description": "Total maximum payments for outcomes from each outcome payer in US dollars.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
           },
           "result_type": {
             "title": "Result type",
-            "description": "This variable specifies whether a result is interim or over all (final).",
+            "description": "This variable specifies whether a result is interim or over all (final). Codelist options are: Interim (interim or intermediate results can be shared specifying details of the duration of the performance period - for instance, ‘outcomes achieved during year 1’) or Overall (overall results are achieved when the project is finished).",
             "type": "object",
             "properties": {
               "value": {
@@ -880,7 +906,7 @@
               },
               "amount": {
                 "title": "Amount",
-                "description": "Total actual payments for outcomes disbursed by outcome payers in relevant local currency.",
+                "description": "Total actual payments for outcomes disbursed by outcome payers at the moment of data collection in relevant currency.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "amount_usd": {
@@ -896,22 +922,24 @@
             "properties": {
               "description": {
                 "title": "Description",
-                "description": "Detail of the modifications to payment commitments occured during the life of the impact bond project.",
+                "description": "Detail of the modifications to payment commitments occurred during the life of the impact bond project.",
                 "$ref": "#/definitions/object_with_value_string_and_status"
               },
               "reason": {
                 "title": "Reason",
-                "description": "Brief explanation of the reasons behind the modifications to payment commitments occured during the life of the impact bond project.",
+                "description": "Brief explanation of the reasons behind the modifications to payment commitments occurred during the life of the impact bond project.",
                 "$ref": "#/definitions/object_with_value_string_and_status"
               }
             }
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about outcome payments.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on outcome payments.",
             "type": "string"
           },
           "status": {
@@ -930,7 +958,7 @@
         "properties": {
           "id": {
             "title": "Id",
-            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the GO Lab analyst.",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This will be set by the GO Lab team. These names could be ‘investment1’, ‘investment2’, etc.",
             "type": "string"
           },
           "organisation_id": {
@@ -974,17 +1002,17 @@
                 "properties": {
                   "min": {
                     "title": "Min",
-                    "description": "When it is not possible to share exact amounts, projects can share a range with minimum and maximum amount of investment committed by each investor.", 
+                    "description": "When it is not possible to share exact amounts, projects can share a range with minimum and maximum amount of investment committed by each investor. This variable captures the lower value in the range.",
                     "$ref": "#/definitions/object_with_value_number"
                   },
                   "exact": {
                     "title": "Exact",
-                    "description": "Exact amount of committed investment from each investor.",
+                    "description": "Exact amount of committed investment from each investor in relevant currency.",
                     "$ref": "#/definitions/object_with_value_number"
                   },
                   "max": {
                     "title": "Max",
-                    "description": "When it is not possible to share exact amounts, projects can share a range with minimum and maximum amount of investment committed by each investor.",
+                    "description": "When it is not possible to share exact amounts, projects can share a range with minimum and maximum amount of investment committed by each investor. This variable captures the higher value in the range.",
                     "$ref": "#/definitions/object_with_value_number"
                   }
                 }
@@ -1073,10 +1101,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about investments.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on investment amounts or investors.",
             "type": "string"
           },
           "status": {
@@ -1127,10 +1157,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about intermediary organisations.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on intermediary organisations.",
             "type": "string"
           },
           "status": {
@@ -1149,17 +1181,17 @@
         "properties": {
           "id": {
             "title": "Id",
-            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by any analyst. The outcome is what changes for an individual as the result of a service or intervention.",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the GO Lab team. These identifiers could be ‘outcomemetric1’, ‘outcomemetric2’, etc.",
             "type": "string"
           },
           "definition": {
             "title": "Outcome Definition",
-            "description": "An outcome target or metric is the specific value attached to the measure of outcomes for the purposes of determining whether satisfactory performance has been achieved. In an impact bond, these targets will usually determine whether a payment is made to the provider or investor. \n\nThis variable provides a detailed description of the metric(s) used to determine payments from the outcome payers. It should provide a clear definition of the conditions under which an outcome is agreed to have been 'achieved' or 'not achieved'.",
+            "description": "The outcome is what changes for an individual as the result of a service or intervention. Example of outcomes include ‘access to a formal job’, ‘improve learning at school’, ‘improve access to health services’, etc.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "target_population": {
             "title": "Target Population",
-            "description": "Description of the targeted population of beneficiaries or service users.",
+            "description": "Description of the targeted population of beneficiaries or service users that are intended to achieve pre-arranged social outcomes.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "targeted_number_of_service_users_or_beneficiaries_total": {
@@ -1190,7 +1222,7 @@
           "outcome_metric_target": {
             "$ref": "#/definitions/object_with_value_string",
             "title": "Outcome metric target",
-            "description": "Targeted levels of outcome metrics to be achieved (e.g. the proportion of people supported who are expected to achieve a given outcome)"
+            "description": "An outcome metric target is the specific value attached to the measure of outcomes for the purposes of determining whether satisfactory performance has been achieved. In an impact bond, these targets will usually determine whether a payment is made to the provider or investor. This variable provides a detailed description of the metric(s) used to determine payments from the outcome payers. It should provide a clear definition of the conditions under which an outcome is agreed to have been ‘achieved’ or ‘not achieved’."
           },
           "other_target_for_meeting_outcome_metric_target": {
             "$ref": "#/definitions/object_with_value_string",
@@ -1209,7 +1241,7 @@
           },
           "policy_sector": {
             "title": "Policy sector",
-            "description": "Main policy sector in which the project is based.",
+            "description": "Main policy sector in which the outcome metric is based.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "primary_sdg_goal": {
@@ -1234,10 +1266,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about outcome metrics.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on outcome metrics.",
             "type": "string"
           },
           "status": {
@@ -1271,12 +1305,12 @@
             "properties": {
               "amount": {
                 "title": "Amount",
-                "description": "Price per unit, often a participant, for whom outcomes are achieved. Price here is the cost to the outcome payer. This is to be populated only if there is a single outcome which is measured at the unit /individual level. Use the currency stated in the above field.",
+                "description": "Price per unit, often a participant, for whom outcomes are achieved. Price here is the cost to the outcome payer. The unit should be equal to the unit of measurement in the ‘Service and beneficiaries’ part of the General Overview tab (eg: individuals, families, villages, etc.). This is to be populated only if there is a single outcome which is measured at the unit/individual level.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "amount_usd": {
                 "title": "Amount USD",
-                "description": "Price per unit, often a participant, for whom outcomes are achieved in USD. Price here is the cost to the outcome payer.", 
+                "description": "Price per unit, often a participant, for whom outcomes are achieved in USD. Price here is the cost to the outcome payer.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
@@ -1304,10 +1338,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about outcome pricing.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on outcome pricing.",
             "type": "string"
           },
           "status": {
@@ -1345,12 +1381,12 @@
           },
           "sending_organisation_id": {
             "title": "Sending Organisation ID",
-            "description": "INDIGO ID of the organisation that makes the transaction.",
+            "description": "INDIGO unique ID of the organisation that makes the transaction.",
             "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "receiving_organisation_id": {
             "title": "Receiving Organisation ID",
-            "description": "INDIGO ID of the organisation that receives the transaction. ",
+            "description": "INDIGO unique ID of the organisation that receives the transaction. ",
             "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "transaction_type": {
@@ -1381,7 +1417,7 @@
             "properties": {
               "currency": {
                 "title": "Currency",
-                "description": "Currency in which transaction data is reported.",
+                "description": "Currency in which transaction data is reported for this project.",
                 "$ref": "#/definitions/object_with_value_string"
               },
               "amount": {
@@ -1391,7 +1427,7 @@
               },
               "amount_usd": {
                 "title": "Amount USD",
-                "description": "Total amount of the transaction in USD.",
+                "description": "Total amount of the transaction in USD. The GO Lab team does the conversion using the exchange rates provided by the World Bank.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
@@ -1422,7 +1458,7 @@
         "properties": {
           "id": {
             "title": "Id",
-            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by any analyst. The outcome is what changes for an individual as the result of a service or intervention.",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by any analyst. These identifiers could be ‘technicalassistance1’, ‘technicalassistance2’, etc.",
             "type": "string"
           },
           "title": {
@@ -1462,10 +1498,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Sources of information about technical assistance to this project.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on technical assistance.",
             "type": "string"
           },
           "status": {
@@ -1613,7 +1651,7 @@
               },
               "amount_usd": {
                 "title": "Amount USD",
-                "description": "Cost of Technical Assistance activities in USD.",
+                "description": "Cost of Technical Assistance activities in USD. The GO Lab team does the conversion using the exchange rates provided by the World Bank.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
@@ -1625,10 +1663,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Sources of information about technical assistance details.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on technical assistance details.",
             "type": "string"
           },
           "status": {
@@ -1647,7 +1687,7 @@
         "properties": {
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
-            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by a GO Lab analyst.",
+            "description": "A within-project original, flexible identifier to be referenced in another sheet. This can be set by the GO Lab team. This ID should be equal to the ID that was stated in the “Results” and “Outcome metrics” sections. These identifiers could be ‘outcomemetric1’, ‘outcomemetric2’, etc.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "result_level": {
@@ -1667,7 +1707,7 @@
           },
           "result_type": {
             "title": "Result type",
-            "description": "This variable specifies whether a result is interim or final.",
+            "description": "This variable specifies whether a result is interim or final. Interim results are reported when the GO Lab receives data from live projects. Final results are reported when the GO Lab receives the final data for complete projects.",
             "type": "object",
             "properties": {
               "value": {
@@ -1698,17 +1738,17 @@
           },
           "outcomes_achieved": {
             "title": "Outcomes achieved",
-            "description": "A description of the outcomes that were achieved, according to the specifications of the contract.",
+            "description": "A description of the outcomes that were achieved, according to the specifications of the contract. This description can be similar to the description of outcome metrics in the ‘Outcome metric’ tab.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "number_engaged_in_impact_bond": {
             "title": "Number engaged In impact bond",
-            "description": "Number of users or beneficiaries who engaged in the impact bond project.",
+            "description": "Number of users or beneficiaries who engaged in the impact bond project. This variable should be completed only when projects are sharing data at the project level.",
             "$ref": "#/definitions/object_with_value_number"
           },
           "number_with_positive_social_outcomes": {
             "title": "Number with Positive social outcomes",
-            "description": "Number of users or beneficiaries who engaged in the impact bond project and achieved positive outcomes.",
+            "description": "Number of users or beneficiaries who engaged in the impact bond project and achieved positive outcomes. This variable should be completed only when projects are sharing data at the project level.",
             "$ref": "#/definitions/object_with_value_number"
           },
           "other_description_of_result": {
@@ -1728,10 +1768,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about results.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on results.",
             "type": "string"
           },
           "status": {
@@ -1750,15 +1792,17 @@
         "properties": {
           "ocid": {
             "title": "OCID",
-            "description": "OCID identifier that links this impact bond project with data on the contracting process.",
+            "description": "Open Contracting unique identifier (OCID) of a procurement process associated with this impact bond project.",
             "type": "string"
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about procurement documents and OCIDs.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on procurement documents and OCIDs.",
             "type": "string"
           },
           "status": {
@@ -1782,10 +1826,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about grants and 360Giving IDs.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on grants and 360Giving IDs.",
             "type": "string"
           },
           "status": {
@@ -1814,6 +1860,7 @@
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on supporting documents.",
             "type": "string"
           },
           "status": {
@@ -1832,7 +1879,7 @@
         "properties": {
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
-            "description": "A within-project original, flexible identifier to be referenced in another sheet. This can be set by a GO Lab analyst.",
+            "description": "A within-project original, flexible identifier to be referenced in another sheet. This can be set by the GO Lab team. This ID should be equal to the ID that was stated in the “Results” and “Outcome metrics” sections. These identifiers could be ‘outcomemetric1’, ‘outcomemetric2’, etc.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "period": {
@@ -1841,24 +1888,24 @@
             "properties": {
               "start_date": {
                 "title": "Start",
-                "description": "Start date of claim period.",
+                "description": "Start date of claim period when service providers and/or investors can claim for outcome payments.",
                 "$ref": "#/definitions/object_with_value_date"
               },
               "end_date": {
                 "title": "End",
-                "description": "End date of claim period.",
+                "description": "End date of claim period when service providers and/or investors can claim for outcome payments.",
                 "$ref": "#/definitions/object_with_value_date"
               }
             }
           },
           "payer_organisation_id": {
             "title": "Payer Organisation ID",
-            "description": "INDIGO ID of organisation that is paying for outcomes.",
+            "description": "INDIGO unique ID of the organisation that is paying for outcomes (in most cases, this organisation will be the outcome funder/s listed in the ‘Outcome Payment Commitments’).",
             "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "recipient_organisation_id": {
             "title": "Recipient Organisation ID",
-            "description": "INDIGO ID of organisation that is receiving payment for outcomes.",
+            "description": "INDIGO unique ID of organisation that is receiving payment for outcomes. Depending on the governance structure of the SIB, different organisations could be claiming for outcome payments. In some cases, the service providers have this role. In other cases, it is the social investor or even the organisation leading the SPV.",
             "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "type": {
@@ -1867,6 +1914,7 @@
             "properties": {
               "value": {
                 "title": "(Value)",
+                "description": "Any outcome payment could be planned or actual. Planned outcome payments are those that have been forecasted by the outcome funder/payer during the design and structing of the impact bond. Actual outcome payments are effective transactions that occurred between the outcome funder and the claiming organisations in a fixed period.",
                 "type": "string",
                 "enum": [
                   "Planned",
@@ -1904,10 +1952,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information about outcome payments.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on outcome payments.",
             "type": "string"
           }
         }
@@ -1921,12 +1971,12 @@
         "properties": {
           "id": {
             "title": "Scenario Id",
-            "description": "",
+            "description": "A within-project original, flexible identifier to be referenced in another sheet. This can be set by the GO Lab team. These identifiers could be ‘scenario1’, ‘scenario2’, etc.",
             "type": "string"
           },
           "name": {
             "title": "Name",
-            "description": "",
+            "description": "Scenario name. These names could be ‘best-case scenario’, ‘medium-case scenario’, ‘worst-case scenario’, etc.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "overall_project_finance": {
@@ -1940,17 +1990,17 @@
                 "properties": {
                   "currency": {
                     "title": "Currency",
-                    "description": "",
+                    "description": "Currency in which maximum potential outcome payment is reported for this project.",
                     "$ref": "#/definitions/object_with_value_string_and_status"
                   },
                   "amount": {
                     "title": "Amount",
-                    "description": "",
+                    "description": "Maximum potential outcome payment according to a particular scenario (e.g.: maximum potential outcome payment in the worst-case scenario).",
                     "$ref": "#/definitions/object_with_value_number_and_status"
                   },
                   "amount_usd": {
                     "title": "Amount USD",
-                    "description": "",
+                    "description": "Maximum potential outcome payment according to a particular scenario in USD (e.g.: maximum potential outcome payment in the worst-case scenario in USD).",
                     "$ref": "#/definitions/object_with_value_number_and_status"
                   }
                 }
@@ -1965,10 +2015,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Sources of information about the different scenarios.",
             "type": "string"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on scenarios.",
             "type": "string"
           }
         }
