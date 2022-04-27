@@ -94,7 +94,7 @@
               },
               "source_ids": {
                 "title": "Sources",
-                "type": "string"
+                "$ref": "#/definitions/source_ids"
               },
               "notes": {
                 "title": "Notes",
@@ -154,7 +154,7 @@
           },
           "source_ids": {
             "title": "Sources",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -224,6 +224,13 @@
           "type": "string"
         }
       }
+    },
+    "source_ids": {
+      "title": "(Source IDs)",
+      "type": "string",
+      "references-data-key": "/id",
+      "references-data-list": "/sources",
+      "references-datas-seperator": ","
     }
   }
 }

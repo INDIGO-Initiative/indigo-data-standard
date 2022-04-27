@@ -46,7 +46,7 @@
         "source_ids": {
           "title": "(Source ID's)",
           "description": "Source of information for stage of development.",
-          "type": "string"
+          "$ref": "#/definitions/source_ids"
         },
         "status": {
           "title": "(Status)",
@@ -113,7 +113,7 @@
         "source_ids": {
           "title": "(Source ID's)",
           "type": "string",
-          "description": "Source of information for variables about dates."
+          "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
@@ -273,7 +273,7 @@
         "source_ids": {
           "title": "(Source ID's)",
           "description": "Source of information for financial and outcomes payments data.",
-          "type": "string"
+          "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
@@ -343,7 +343,7 @@
         "source_ids": {
           "title": "(Source ID's)",
           "description": "Sources of information about investment details.",
-          "type": "string"
+          "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
@@ -411,7 +411,7 @@
         "source_ids": {
           "title": "(Source ID's)",
           "description": "Source of information for purpose and classifications data.",
-          "type": "string"
+          "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
@@ -489,7 +489,7 @@
         "source_ids": {
           "title": "(Source ID's)",
           "description": "Source of information for service users' data.",
-          "type": "string"
+          "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
@@ -516,7 +516,7 @@
         "source_ids": {
           "title": "(Source ID's)",
           "description": "Source of information for COVID-19 changes in projects.",
-          "type": "string"
+          "$ref": "#/definitions/source_ids"
         },
         "status": {
           "title": "(Status)",
@@ -554,7 +554,7 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about Outcomes Funds.",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "(Notes)",
@@ -629,7 +629,7 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about delivery locations.",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -798,7 +798,7 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about service provision.",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -935,7 +935,7 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about outcome payments.",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -1102,7 +1102,8 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about investments.",
-            "type": "string"
+            "type": "string",
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -1158,7 +1159,8 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about intermediary organisations.",
-            "type": "string"
+            "type": "string",
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -1267,7 +1269,8 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about outcome metrics.",
-            "type": "string"
+            "type": "string",
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -1339,7 +1342,8 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about outcome pricing.",
-            "type": "string"
+            "type": "string",
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -1434,7 +1438,7 @@
           },
           "source_ids": {
             "title": "Sources",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -1499,7 +1503,7 @@
           "source_ids": {
             "title": "Sources",
             "description": "Sources of information about technical assistance to this project.",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -1769,7 +1773,7 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about results.",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -1798,7 +1802,7 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about procurement documents and OCIDs.",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -1827,7 +1831,7 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about grants and 360Giving IDs.",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -1953,7 +1957,7 @@
           "source_ids": {
             "title": "Sources",
             "description": "Source of information about outcome payments.",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -2016,7 +2020,7 @@
           "source_ids": {
             "title": "Sources",
             "description": "Sources of information about the different scenarios.",
-            "type": "string"
+            "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
@@ -2180,6 +2184,13 @@
     "sandboxes": {
       "title": "(In Sandboxes)",
       "type": "string"
+    },
+    "source_ids": {
+      "title": "(Source IDs)",
+      "type": "string",
+      "references-data-key": "/id",
+      "references-data-list": "/sources",
+      "references-datas-seperator": ","
     }
   }
 }
