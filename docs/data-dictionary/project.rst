@@ -42,6 +42,8 @@ Dates
 Overall project finance
 ^^^^^^^^^^^^^^^^^^^^^^^
 
+Most finance variables will be converted into US dollars. The GO Lab team does the conversion using the yearly exchange rate provided by the World Bank, using the start year of service delivery as a reference.
+
 .. datadictionary::
    :schema: project.json
    :path: /properties/overall_project_finance
@@ -63,6 +65,8 @@ Service and beneficiaries
 Changes to project due to COVID-19
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+If the project started, or was delivering services in or after March 2020, it may have experienced some changes due to the COVID-19 pandemic.  
+
 .. datadictionary::
    :schema: project.json
    :path: /properties/changes_to_project_due_to_covid19
@@ -74,14 +78,15 @@ Outcome Funds
    :schema: project.json
    :path: /properties/outcome_funds/items
 
-When viewing data, other variables from the fund data model may be included to provide more information. See :doc:`the Fund data dictionary <fund>` for more information on what these variables mean.
+There is no standard or agreed definition as to what constitutes an 'outcomes fund'. Broadly, an outcomes fund is an approach that enables several outcomes-based contracts to be developed and supported in parallel. A common goal espoused by outcomes fund developers is to improve services that tackle complex social issues by growing the outcomes contracting market particularly by funding impact bonds and other payment-by-results mechanisms. In their broadest sense outcomes funds signal a commitment to pay for social outcomes, rather than inputs or activities.
 
+When viewing data, other variables from the fund data model may be included to provide more information. See :doc:`the Fund data dictionary <fund>` for more information on what these variables mean.
 
 
 Delivery Locations
 ------------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+This is a list. One project can have multiple items of data, as one project can deliver services in many different places at the same time. One item of data is defined as: 
 
 .. datadictionary::
    :schema: project.json
@@ -91,7 +96,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Sources
 -------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+This is a list. One project can have multiple items of data, as we may use multiple sources of information to populate one project spreadsheet. One item of data is defined as:
 
 .. datadictionary::
    :schema: project.json
@@ -101,19 +106,21 @@ This is a list. One project can have multiple items of data. One item of data is
 Organisations
 -------------
 
+The organisations listed are those referenced in other tabs of the spreadsheet (such as service providers, investors, outcome payers, etc.). Each organisation has a unique INDIGO identifier defined by the GO Lab team.
+
 When viewing data, variables from the organisation data model may be included to provide more information. See :doc:`the Organisation data dictionary <organisation>` for more information on what these variables mean.
-
-The organisations listed are those referenced in other parts of the project, such as :ref:`data-dictionary-project-service-provisions`.
-
-.. _data-dictionary-project-service-provisions:
 
 Service Provisions
 ------------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
-
-
-
+This section collects data about four different dimensions of service provision: 
+ 
+•	Organisations providing services to impact bond projects 
+•	Planned services 
+•	Actual services 
+•	Alterations to contracted services 
+ 
+This is a list. One project can have multiple items of data, as one impact bond could have several service providers. One item of data is defined as: 
 
 .. datadictionary::
    :schema: project.json
@@ -123,7 +130,13 @@ This is a list. One project can have multiple items of data. One item of data is
 Outcome Payment Commitments
 ---------------------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+This section aims to collect data about three different dimensions of outcome payments: 
+
+•	Organisations paying for outcomes 
+•	Maximum potential outcome payments (in best case scenario) 
+•	Total outcome payments made up to date (this can be updated during the life of the project) 
+
+This is a list of data items. One project can have multiple items of data, as one project may have multiple outcome payers. One item of data is defined as:
 
 
 .. datadictionary::
@@ -134,10 +147,14 @@ This is a list. One project can have multiple items of data. One item of data is
 Investments
 -----------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
-
-
-
+This section aims to collect data about three different dimensions of investment: 
+ 
+•	Organisations investing in impact bond projects 
+•	Initial investment commitments 
+•	Return to investment in best case scenario 
+•	Investor repayments (this can be updated during the life of the project) 
+ 
+This is a list. One project can have multiple items of data, as one project can receive capital from different investors. One item of data represents a particular investor and is defined as: 
 
 .. datadictionary::
    :schema: project.json
@@ -146,9 +163,12 @@ This is a list. One project can have multiple items of data. One item of data is
 Intermediary services
 ---------------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
-
-
+This section aims to collect data about two different dimensions of intermediary services: 
+ 
+•	Organisations providing intermediary services to impact bond projects 
+•	Type of intermediary services 
+ 
+This is a list. One project can have multiple items of data, as one project may receive intermediation from several organisations. One item of data represents one intermediary organisation and is defined as: 
 
 .. datadictionary::
    :schema: project.json
@@ -157,9 +177,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Outcome Metrics
 ---------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
-
-
+This is a list. One project can have multiple items of data, as one project may have several outcomes to achieve. One item of data represents one outcome metric and is defined as: 
 
 .. datadictionary::
    :schema: project.json
@@ -168,8 +186,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Outcome Pricing
 ---------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
-
+This is a list. One project can have multiple items of data, as one project may have several outcomes to achieve with different prices. One item of data represents one social outcome price and is defined as: 
 
 
 .. datadictionary::
@@ -180,8 +197,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Results
 -------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
-
+This is a list. One project can have multiple items of data, as one project may have several outcomes with different results. One item of data represents the result for one outcome metric and is defined as: 
 
 
 .. datadictionary::
@@ -191,8 +207,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Outcome Payments
 ----------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
-
+This is a list. One project can have multiple items of data, as one project can receive different outcome payments for different outcome metrics. One item of data represents one outcome payment (to one outcome metric) and is defined as:  
 
 
 .. datadictionary::
@@ -203,8 +218,9 @@ This is a list. One project can have multiple items of data. One item of data is
 Open Contracting
 ----------------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
-
+The OCDS (Open Contracting Data Standard) is a standard that enables disclosure of data and documents at all stages of the contracting process by defining a common data model and unique identifiers for documents. An explanation of how the Open Contracting Data Standard work can be found here: https://standard.open-contracting.org/latest/en/ 
+ 
+This is a list. One project can have multiple items of data as one impact bond project can be associated with various procurement processes. One item of data is defined as: 
 
 
 .. datadictionary::
@@ -214,8 +230,9 @@ This is a list. One project can have multiple items of data. One item of data is
 360Giving
 ---------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
-
+The 360Giving Data Standard enables the disclosure of data on grants and grant making. An explanation of how the 360Giving Standard works can be found here: https://standard.threesixtygiving.org/en/latest/ 
+ 
+This is a list. One project can have multiple items of data as one impact bond may have received more than one grant. One item of data is defined as: 
 
 
 .. datadictionary::
@@ -225,8 +242,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Documents
 ---------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
-
+This is a list of supporting documentation for this project. Documents include press releases, interim reports, final reports, case studies, etc. One project can have multiple items of data. One item of data is defined as: 
 
 
 .. datadictionary::
@@ -236,7 +252,10 @@ This is a list. One project can have multiple items of data. One item of data is
 Scenarios
 ---------
 
-This is a list. One project can have multiple items of data. One item of data is defined as:
+Stakeholder organisations may forecast different scenarios for one impact bond project. For instance, the best-case scenario will coincide with the achievement of all possible social outcomes. Organisations may plan for the situation where the project does not achieve social outcomes as expected.  
+ 
+This is a list. One project can have multiple items of data as one project may plan for different scenarios. One item of data is defined as:
+
 
 .. datadictionary::
    :schema: project.json
@@ -247,10 +266,10 @@ Social Investment Prototype
 ---------------------------
 
 
-The Social Investment Prototype offers additional tabs to describe technical assistance and the financial aspects of projects in greater detail, including individual transactions.
+The Social Investment Prototype offers additional tabs to describe technical assistance and some financial aspects of projects in greater detail, including individual transactions. 
+ 
+This first set of variables is in the General Overview tab: 
 
-
-On the `General Overview` tab:
 
 .. datadictionary::
    :schema: project.json
@@ -260,7 +279,7 @@ On the `General Overview` tab:
 Investment Details
 ^^^^^^^^^^^^^^^^^^
 
-Expected and latest internal rates of return can be recorded on the investment details tab (This may be in the general overview tab).
+Expected and latest internal rates of return can be recorded on the investment details table (in the general overview tab).
 
 
 .. datadictionary::
@@ -299,7 +318,7 @@ This is a list. One project can have multiple items of data. One item of data is
 Technical Assistance
 ^^^^^^^^^^^^^^^^^^^^
 
-Technical Assistance is modelled as a period of engagement between a funding organisation and a recipient organisation with a defined start and end date.
+Technical Assistance (TA) is modelled as a period of engagement between a funding organisation and a recipient organisation with a defined start and end date.
 
 This period of engagement can be broken down on the Technical Assistance Details tab into a series of component activities (as well as high-level information that covers the whole engagement where appropriate).
 
