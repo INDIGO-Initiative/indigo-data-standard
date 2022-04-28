@@ -74,13 +74,13 @@ If the project started, or was delivering services in or after March 2020, it ma
 Outcome Funds
 -------------
 
-.. datadictionary::
-   :schema: project.json
-   :path: /properties/outcome_funds/items
-
 There is no standard or agreed definition as to what constitutes an 'outcomes fund'. Broadly, an outcomes fund is an approach that enables several outcomes-based contracts to be developed and supported in parallel. A common goal espoused by outcomes fund developers is to improve services that tackle complex social issues by growing the outcomes contracting market particularly by funding impact bonds and other payment-by-results mechanisms. In their broadest sense outcomes funds signal a commitment to pay for social outcomes, rather than inputs or activities.
 
 When viewing data, other variables from the fund data model may be included to provide more information. See :doc:`the Fund data dictionary <fund>` for more information on what these variables mean.
+
+.. datadictionary::
+   :schema: project.json
+   :path: /properties/outcome_funds/items
 
 
 Delivery Locations
