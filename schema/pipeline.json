@@ -43,7 +43,7 @@
     },
     "state_development": {
       "title": "State of Development",
-      "description": "State of development of the project.",
+      "description": "Latest known development state of the project.",
       "type": "object",
       "properties": {
         "state": {
@@ -66,17 +66,17 @@
         },
         "reason_abandoned": {
           "title": "Reason for abandoned",
-          "description": "-",
+          "description": "A list of stakeholders motivations to abandon the project and/or obstacles that the stakeholders could not solve.",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "source_ids": {
           "title": "(Source ID's)",
-          "description": "-",
+          "description": "Source of information for state of development",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
-          "description": "-",
+          "description": "Notes on state of development",
           "type": "string"
         }
       }
@@ -106,12 +106,12 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
-          "description": "-",
+          "description": "Source of information for stage of development",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
-          "description": "-",
+          "description": "Notes on stage of development",
           "type": "string"
         }
       }
@@ -160,10 +160,12 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for type of instrument",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on type of instrument",
           "type": "string"
         }
       }
@@ -183,12 +185,12 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
-          "description": "-",
+          "description": "Source of information for larger outcomes-based programmes related to this project",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
-          "description": "-",
+          "description": "Notes on larger outcomes-based programmes related to this project",
           "type": "string"
         }
       }
@@ -240,18 +242,22 @@
         },
         "expected_length": {
           "title": "Expected length of project (years)",
+          "description": "Expected duration of the project",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "design_process_began": {
           "title": "Project design process began",
+          "description": "Start date of project design process",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for dates",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on dates",
           "type": "string"
         }
       }
@@ -261,15 +267,17 @@
       "properties": {
         "rationale_outcomes_based_financing": {
           "title": "Rationale for using outcome based finance",
-          "description": "What is the rationale for using outcomes-based financing?",
+          "description": "Rationale for using outcomes-based financing",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for rationale for using outcome based model",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on rationale for using outcome based model",
           "type": "string"
         }
       }
@@ -279,15 +287,17 @@
       "properties": {
         "key_challenges_launch": {
           "title": "Key challenges to launch",
-          "description": "Key challenges to getting the project launched?",
+          "description": " A list of key challenges to getting the project launched",
           "$ref": "#/definitions/object_with_value_string_and_status"
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for key challenges to getting the project launched",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
+           "description": "Notes on key challenges to getting the project launched",
           "type": "string"
         }
       }
@@ -328,10 +338,12 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for the role of domestic government",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on the role of domestic government",
           "type": "string"
         }
       }
@@ -368,10 +380,12 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for service providers",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on service providers",
           "type": "string"
         }
       }
@@ -400,10 +414,12 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for availability of a feasibility study",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on availability of a feasibility study",
           "type": "string"
         }
       }
@@ -443,10 +459,12 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for proposed financing instrument",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on proposed financing instrument",
           "type": "string"
         }
       }
@@ -466,12 +484,12 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
-          "description": "-",
+          "description": "Source of information for technical assistance grants",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
-          "description": "-",
+          "description": "Notes on technical assistance grants",
           "type": "string"
         }
       }
@@ -499,10 +517,12 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for maximum potential outcome payments",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on maximum potential outcome payments",
           "type": "string"
         }
       }
@@ -598,16 +618,18 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for policy sector and SDG classification",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on policy sector and SDG classification",
           "type": "string"
         }
       }
     },
     "service_and_beneficiaries": {
-      "title": "Service and beneficiaries",
+      "title": "Service users and beneficiaries",
       "type": "object",
       "properties": {
         "target_population": {
@@ -672,10 +694,12 @@
         },
         "source_ids": {
           "title": "(Source ID's)",
+          "description": "Source of information for service users and beneficiaries",
           "$ref": "#/definitions/source_ids"
         },
         "notes": {
           "title": "(Notes)",
+          "description": "Notes on service users and beneficiaries",
           "type": "string"
         }
       }
@@ -748,10 +772,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information for delivery locations",
             "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on delivery locations",
             "type": "string"
           },
           "status": {
@@ -814,6 +840,7 @@
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on sources",
             "type": "string"
           },
           "status": {
@@ -832,7 +859,7 @@
         "properties": {
           "id": {
             "title": "Id",
-            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the analyst.",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the GO Lab analyst.",
             "type": "string"
           },
           "organisation_id": {
@@ -880,10 +907,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information for service provision",
             "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on service provision",
             "type": "string"
           },
           "status": {
@@ -998,10 +1027,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information for outcome payment commitments",
             "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on outcome payment commitments",
             "type": "string"
           },
           "status": {
@@ -1068,7 +1099,7 @@
                   },
                   "exact": {
                     "title": "Exact",
-                    "description": "Exact amount of committed investment from each investor.",
+                    "description": "Amount of committed investment from each investor.",
                     "$ref": "#/definitions/object_with_value_number"
                   },
                   "max": {
@@ -1162,10 +1193,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information for investments",
             "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on investments",
             "type": "string"
           },
           "status": {
@@ -1215,10 +1248,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information for intermediary organisations",
             "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on intermediary organisations",
             "type": "string"
           },
           "status": {
@@ -1236,12 +1271,12 @@
         "properties": {
           "id": {
             "title": "Id",
-            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by any analyst. The outcome is what changes for an individual as the result of a service or intervention.",
+            "description": "A within-project original, flexible identifiers to be referenced in another sheet. This can be set by the GO Lab analyst.",
             "type": "string"
           },
           "definition": {
             "title": "Outcome Definition",
-            "description": "An outcome target or metric is the specific value attached to the measure of outcomes for the purposes of determining whether satisfactory performance has been achieved. In an impact bond, these targets will usually determine whether a payment is made to the provider or investor. \n\nThis variable provides a detailed description of the metric(s) used to determine payments from the outcome payers. It should provide a clear definition of the conditions under which an outcome is agreed to have been 'achieved' or 'not achieved'.",
+            "description": "The outcome is what changes for an individual as the result of a service or intervention. Example of outcomes include ‘access to a formal job’, ‘improve learning at school’, ‘improve access to health services’, etc.",
             "$ref": "#/definitions/object_with_value_string"
           },
           "target_population": {
@@ -1277,7 +1312,7 @@
           "outcome_metric_target": {
             "$ref": "#/definitions/object_with_value_string",
             "title": "Outcome metric target",
-            "description": "Targeted levels of outcome metrics to be achieved (e.g. the proportion of people supported who are expected to achieve a given outcome)"
+            "description": "Targeted levels of outcome metrics to be achieved (e.g. the proportion of people supported who are expected to achieve a given outcome)."
           },
           "other_target_for_meeting_outcome_metric_target": {
             "$ref": "#/definitions/object_with_value_string",
@@ -1321,10 +1356,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information for outcome metrics.",
             "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on outcome metrics.",
             "type": "string"
           },
           "status": {
@@ -1353,6 +1390,7 @@
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on documents.",
             "type": "string"
           },
           "status": {
@@ -1381,10 +1419,12 @@
           },
           "source_ids": {
             "title": "Sources",
+            "description": "Source of information for INDIGO ID of this project once it has launched and it is part of the Impact Bond Dataset.",
             "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
+            "description": "Notes on INDIGO ID of this project once it has launched and it is part of the Impact Bond Dataset.",
             "type": "string"
           },
           "status": {
