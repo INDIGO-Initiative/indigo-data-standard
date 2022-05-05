@@ -35,8 +35,6 @@
           "type": "string",
           "description": "Codelist options are: Contracted (A project falls under the category of ‘contracted’ when key stakeholders have signed a contract but service provision has not started yet), Implementation (A project falls under the category of ‘implementation’ when service provision has started.), Service delivery complete (A project falls under the category of ‘complete service delivery’ when service provision has finished) or Complete (A project falls under the category of ‘complete’ when service provision has finished, and all outcome payments have been made)",
           "enum": [
-            "Early-stage design",
-            "Late-stage design",
             "Contracted",
             "Implementation",
             "Service delivery complete",

@@ -34,6 +34,8 @@ Changes to Project descriptions after `a review and consultation process <https:
 
 Specify options for sources type (Project, Organisation and Pipeline).
 
+Project "Stage of Development" - remove two options. Data for these lives in Pipeline now.
+
 Add non standard "references-model" and "references-models-seperator" keys to JSON Schema for links between models.
 
 Add non standard "references-data-key", "references-data-list" and "references-datas-seperator" keys to JSON Schema for links between part of the same model. Done for "sources" only - project.json and pipeline.json is missing other references.
