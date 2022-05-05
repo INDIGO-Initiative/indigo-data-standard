@@ -806,7 +806,23 @@
           "type": {
             "title": "Type",
             "description": "Type of source of information.",
-            "$ref": "#/definitions/object_with_value_string"
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "enum": [
+                  "Contract",
+                  "Report",
+                  "Award Notice",
+                  "Website",
+                  "News piece",
+                  "Press release",
+                  "Email correspondence",
+                  "Evaluation report"
+                ]
+              }
+            }
           },
           "publishing_organisation_ids": {
             "title": "Publishing Organisations",

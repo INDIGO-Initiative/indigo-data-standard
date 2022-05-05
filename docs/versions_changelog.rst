@@ -32,10 +32,11 @@ New Pipeline model
 
 Changes to Project descriptions after `a review and consultation process <https://golab.bsg.ox.ac.uk/community/news/have-your-say-with-the-impact-bond-dataset-data-definitions/>`_. This does not change the meaning of any variables, only adds examples, clarifies some definitions and includes descriptions for the 'Sources' and "Notes' variables.
 
+Specify options for sources type (Project, Organisation and Pipeline).
+
 Add non standard "references-model" and "references-models-seperator" keys to JSON Schema for links between models.
 
 Add non standard "references-data-key", "references-data-list" and "references-datas-seperator" keys to JSON Schema for links between part of the same model. Done for "sources" only - project.json and pipeline.json is missing other references.
-
 
 2.3.0 - 2022-03-18
 ~~~~~~~~~~~~~~~~~~
