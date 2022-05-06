@@ -28,6 +28,9 @@ Changelog
 Unreleased
 ~~~~~~~~~~
 
+3.0.0 - 2022-05-06
+~~~~~~~~~~~~~~~~~~
+
 New Pipeline model
 
 Changes to Project descriptions after `a review and consultation process <https://golab.bsg.ox.ac.uk/community/news/have-your-say-with-the-impact-bond-dataset-data-definitions/>`_. This does not change the meaning of any variables, only adds examples, clarifies some definitions and includes descriptions for the 'Sources' and "Notes' variables.
