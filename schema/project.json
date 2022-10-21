@@ -1797,6 +1797,9 @@
           "status": {
             "title": "Status",
             "type": "string"
+          },
+          "sandboxes": {
+            "$ref": "#/definitions/sandboxes"
           }
         }
       },

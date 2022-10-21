@@ -28,6 +28,8 @@ Changelog
 Unreleased
 ~~~~~~~~~~
 
+Add sandboxes field to Results in Project model.
+
 3.0.0 - 2022-05-06
 ~~~~~~~~~~~~~~~~~~
 
