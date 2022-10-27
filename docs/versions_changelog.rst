@@ -28,6 +28,8 @@ Changelog
 Unreleased
 ~~~~~~~~~~
 
+Add duration of service provision (anticipated and actual) to project.
+
 3.0.1 - 2022-10-21
 ~~~~~~~~~~~~~~~~~~
 

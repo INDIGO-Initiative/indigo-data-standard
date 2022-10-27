@@ -108,6 +108,16 @@
           "description": "Actual date when service provision ended/will end.",
           "$ref": "#/definitions/object_with_value_date_and_status"
         },
+        "anticipated_duration_of_service_provision": {
+          "title": "Anticipated duration of service provision",
+          "description": "This is the anticipated length of the service delivery in months, from the start date to the end date of the delivery (not the end of outcome payments). If the start and end date fields are filled in, it is possible to calculate this duration automatically and thus the duration may not be filled in.",
+          "$ref": "#/definitions/object_with_value_number_and_status"
+        },
+        "actual_duration_of_service_provision": {
+          "title": "Actual duration of service provision",
+          "description": "This is the actual length of the service delivery in months. This can be different from the anticipated duration. We only expect to get a value for this variable once the project is complete. If the start and end date fields are filled in, it is possible to calculate this duration automatically and thus the duration may not be filled in.",
+          "$ref": "#/definitions/object_with_value_number_and_status"
+        },
         "source_ids": {
           "title": "(Source ID's)",
           "type": "string",
