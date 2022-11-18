@@ -261,6 +261,69 @@ This is a list. One project can have multiple items of data as one project may p
    :schema: project.json
    :path: /properties/scenarios/items
 
+Investor/Fund Manager Cost
+--------------------------
+
+
+.. datadictionary::
+   :schema: project.json
+   :path: /properties/investor_or_fund_manager_cost/items
+
+Phase options
+^^^^^^^^^^^^^
+
+.. csv-table::
+   :file: ../../schema/codelists/project_investor_or_fund_manager_cost_phase.csv
+
+
+
+Classification options
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+   :file: ../../schema/codelists/project_investor_or_fund_manager_cost_classification.csv
+
+
+
+Type options
+^^^^^^^^^^^^
+
+.. csv-table::
+   :file: ../../schema/codelists/project_investor_or_fund_manager_cost_type.csv
+
+
+Outcome Payer Cost
+------------------
+
+
+.. datadictionary::
+   :schema: project.json
+   :path: /properties/outcome_payer_cost/items
+
+Phase options
+^^^^^^^^^^^^^
+
+.. csv-table::
+   :file: ../../schema/codelists/project_outcome_payer_cost_phase.csv
+
+
+
+Classification options
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+   :file: ../../schema/codelists/project_outcome_payer_cost_classification.csv
+
+
+
+Type options
+^^^^^^^^^^^^
+
+.. csv-table::
+   :file: ../../schema/codelists/project_outcome_payer_cost_type.csv
+
+
+
 
 Social Investment Prototype
 ---------------------------

@@ -2056,6 +2056,214 @@
           }
         }
       }
+    },
+    "investor_or_fund_manager_cost": {
+      "title": "Investor/Fund Manager Cost",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+              "title": "Date",
+              "description": "",
+              "$ref": "#/definitions/object_with_value_date"
+          },
+          "phase": {
+            "title": "Phase of Impact Bond",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "description": "",
+                "type": "string",
+                "codelist": "project_investor_or_fund_manager_cost_phase.csv"
+              }
+            }
+          },
+          "classification": {
+            "title": "Cost Classification",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "description": "",
+                "type": "string",
+                "codelist": "project_investor_or_fund_manager_cost_classification.csv"
+              }
+            }
+          },
+          "money": {
+            "title": "Money",
+            "type": "object",
+            "properties": {
+              "currency": {
+                "title": "Currency",
+                "description": "Currency",
+                "$ref": "#/definitions/object_with_value_string"
+              },
+              "planned": {
+                "title": "Planned",
+                "description": "",
+                "$ref": "#/definitions/object_with_value_number"
+              },
+              "planned_usd": {
+                "title": "Planned USD",
+                "description": "",
+                "$ref": "#/definitions/object_with_value_number"
+              },
+              "actual": {
+                "title": "Actual",
+                "description": "",
+                "$ref": "#/definitions/object_with_value_number"
+              },
+              "actual_usd": {
+                "title": "Actual USD",
+                "description": "",
+                "$ref": "#/definitions/object_with_value_number"
+              }
+            }
+          },
+          "incurred_by": {
+              "title": "Cost incurred by",
+              "description": "",
+              "$ref": "#/definitions/object_with_value_organisation_reference"
+          },
+          "type": {
+            "title": "Type",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "description": "",
+                "type": "string",
+                "codelist": "project_investor_or_fund_manager_cost_type.csv"
+              }
+            }
+          },
+          "days": {
+              "title": "Number of days",
+              "description": "",
+              "$ref": "#/definitions/object_with_value_number"
+          },
+          "status": {
+            "$ref": "#/definitions/status"
+          },
+          "source_ids": {
+            "title": "Sources",
+            "description": "Sources of information about the different scenarios.",
+            "$ref": "#/definitions/source_ids"
+          },
+          "notes": {
+            "title": "Notes",
+            "description": "Notes on scenarios.",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "outcome_payer_cost": {
+      "title": "Outcome Payer Cost",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+              "title": "Date",
+              "description": "",
+              "$ref": "#/definitions/object_with_value_date"
+          },
+          "phase": {
+            "title": "Phase of Impact Bond",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "description": "",
+                "type": "string",
+                "codelist": "project_outcome_payer_cost_phase.csv"
+              }
+            }
+          },
+          "classification": {
+            "title": "Cost Classification",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "description": "",
+                "type": "string",
+                "codelist": "project_outcome_payer_cost_classification.csv"
+              }
+            }
+          },
+          "money": {
+            "title": "Money",
+            "type": "object",
+            "properties": {
+              "currency": {
+                "title": "Currency",
+                "description": "Currency",
+                "$ref": "#/definitions/object_with_value_string"
+              },
+              "planned": {
+                "title": "Planned",
+                "description": "",
+                "$ref": "#/definitions/object_with_value_number"
+              },
+              "planned_usd": {
+                "title": "Planned USD",
+                "description": "",
+                "$ref": "#/definitions/object_with_value_number"
+              },
+              "actual": {
+                "title": "Actual",
+                "description": "",
+                "$ref": "#/definitions/object_with_value_number"
+              },
+              "actual_usd": {
+                "title": "Actual USD",
+                "description": "",
+                "$ref": "#/definitions/object_with_value_number"
+              }
+            }
+          },
+          "incurred_by": {
+              "title": "Cost incurred by",
+              "description": "",
+              "$ref": "#/definitions/object_with_value_organisation_reference"
+          },
+          "type": {
+            "title": "Type",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "description": "",
+                "type": "string",
+                "codelist": "project_outcome_payer_cost_type.csv"
+              }
+            }
+          },
+          "days": {
+              "title": "Number of days",
+              "description": "",
+              "$ref": "#/definitions/object_with_value_number"
+          },
+          "status": {
+            "$ref": "#/definitions/status"
+          },
+          "source_ids": {
+            "title": "Sources",
+            "description": "Sources of information about the different scenarios.",
+            "$ref": "#/definitions/source_ids"
+          },
+          "notes": {
+            "title": "Notes",
+            "description": "Notes on scenarios.",
+            "type": "string"
+          }
+        }
+      }
     }
   },
   "definitions": {

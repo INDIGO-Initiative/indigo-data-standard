@@ -28,6 +28,8 @@ Changelog
 Unreleased
 ~~~~~~~~~~
 
+Add Investor/Fund Manager Cost and Outcome Payer Cost to project.
+
 Add duration of service provision (anticipated and actual) to project.
 
 Add job title, Twitter, LinkedIn and profile to organisation contact section. 
