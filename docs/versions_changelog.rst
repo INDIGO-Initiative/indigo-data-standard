@@ -30,6 +30,10 @@ Unreleased
 
 Add duration of service provision (anticipated and actual) to project.
 
+Add job title, Twitter, LinkedIn and profile to organisation contact section. 
+
+Add status fields to organisation contact section. 
+
 3.0.1 - 2022-10-21
 ~~~~~~~~~~~~~~~~~~
 

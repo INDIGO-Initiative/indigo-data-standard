@@ -111,13 +111,33 @@
       "description": "Name of the person to contact from that party/organisation.",
       "properties": {
         "name": {
-          "$ref": "#/definitions/object_with_value_string",
+          "$ref": "#/definitions/object_with_value_string_and_status",
           "title": "Name"
         },
+        "job_title": {
+          "$ref": "#/definitions/object_with_value_string_and_status",
+          "title": "Job title", 
+          "description": "Job title of the person to contact from that party/organisation."
+        },
+        "profile": {
+          "$ref": "#/definitions/object_with_value_string_and_status",
+          "title": "Profile", 
+          "description": "Profile of the person to contact from that party/organisation."
+        },
         "email": {
-          "$ref": "#/definitions/object_with_value_string",
+          "$ref": "#/definitions/object_with_value_string_and_status",
           "title": "Email", 
           "description": "Email of the person to contact from that party/organisation."
+        },
+        "twitter": {
+          "$ref": "#/definitions/object_with_value_string_and_status",
+          "title": "Twitter", 
+          "description": "Twitter profile URL of the person to contact from that party/organisation."
+        },
+        "linkedin": {
+          "$ref": "#/definitions/object_with_value_string_and_status",
+          "title": "LinkedIn", 
+          "description": "LinkedIn profile URL of the person to contact from that party/organisation."
         }
       }
     },
@@ -241,6 +261,24 @@
         }
       }
     },
+    "object_with_value_string_and_status": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "(Value)",
+          "type": "string"
+        },
+        "status": {
+          "title": "(Status)",
+          "type": "string",
+          "enum": [
+            "PUBLIC",
+            "PRIVATE",
+            "DISPUTED"
+          ]
+        }
+      }
+    },
     "source_ids": {
       "title": "(Source IDs)",
       "type": "string",
@@ -248,5 +286,6 @@
       "references-data-list": "/sources",
       "references-datas-seperator": ","
     }
+    
   }
 }
