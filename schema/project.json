@@ -2076,7 +2076,7 @@
                 "title": "(Value)",
                 "description": "",
                 "type": "string",
-                "codelist": "project_investor_or_fund_manager_cost_phase.csv"
+                "codelist": "project_provider_side_cost_phase.csv"
               }
             }
           },
@@ -2088,7 +2088,7 @@
                 "title": "(Value)",
                 "description": "Costs are classified as purchased or spent, in kind, staff costs and other type of costs.",
                 "type": "string",
-                "codelist": "project_investor_or_fund_manager_cost_classification.csv"
+                "codelist": "project_provider_side_cost_classification.csv"
               }
             }
           },
@@ -2136,7 +2136,7 @@
                 "title": "(Value)",
                 "description": "",
                 "type": "string",
-                "codelist": "project_investor_or_fund_manager_cost_type.csv"
+                "codelist": "project_provider_side_cost_type.csv"
               }
             }
           },

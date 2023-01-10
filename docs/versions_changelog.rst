@@ -28,7 +28,7 @@ Changelog
 Unreleased
 ~~~~~~~~~~
 
-Add Investor/Fund Manager Cost and Outcome Payer Cost to project.
+Add Provider Side Cost and Outcome Payer Cost to project.
 
 Add duration of service provision (anticipated and actual) to project.
 

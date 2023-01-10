@@ -273,7 +273,7 @@ Phase options
 ^^^^^^^^^^^^^
 
 .. csv-table::
-   :file: ../../schema/codelists/project_investor_or_fund_manager_cost_phase.csv
+   :file: ../../schema/codelists/project_provider_side_cost_phase.csv
 
 
 
@@ -281,7 +281,7 @@ Classification options
 ^^^^^^^^^^^^^^^^^^^^^^
 
 .. csv-table::
-   :file: ../../schema/codelists/project_investor_or_fund_manager_cost_classification.csv
+   :file: ../../schema/codelists/project_provider_side_cost_classification.csv
 
 
 
@@ -289,7 +289,7 @@ Type options
 ^^^^^^^^^^^^
 
 .. csv-table::
-   :file: ../../schema/codelists/project_investor_or_fund_manager_cost_type.csv
+   :file: ../../schema/codelists/project_provider_side_cost_type.csv
 
 
 Outcome Payer Cost
