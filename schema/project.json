@@ -2074,7 +2074,7 @@
             "properties": {
               "value": {
                 "title": "(Value)",
-                "description": "Phases of impact bonds include: development and design, contract set up and negotiation, and operational and management.",
+                "description": "",
                 "type": "string",
                 "codelist": "project_investor_or_fund_manager_cost_phase.csv"
               }
@@ -2178,7 +2178,7 @@
             "properties": {
               "value": {
                 "title": "(Value)",
-                "description": "Phases of impact bonds include: development and design, contract set up and negotiation, and operational and management.",
+                "description": "",
                 "type": "string",
                 "codelist": "project_outcome_payer_cost_phase.csv"
               }
