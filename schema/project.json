@@ -2057,15 +2057,15 @@
         }
       }
     },
-    "investor_or_fund_manager_cost": {
-      "title": "Investor/Fund Manager Cost",
+    "provider_side_cost": {
+      "title": "Provider side cost",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "date": {
               "title": "Date",
-              "description": "",
+              "description": "Date of transaction",
               "$ref": "#/definitions/object_with_value_date"
           },
           "phase": {
@@ -2074,7 +2074,7 @@
             "properties": {
               "value": {
                 "title": "(Value)",
-                "description": "",
+                "description": "Phases of impact bonds include: development and design, contract set up and negotiation, and operational and management.",
                 "type": "string",
                 "codelist": "project_investor_or_fund_manager_cost_phase.csv"
               }
@@ -2086,7 +2086,7 @@
             "properties": {
               "value": {
                 "title": "(Value)",
-                "description": "",
+                "description": "Costs are classified as purchased or spent, in kind, staff costs and other type of costs.",
                 "type": "string",
                 "codelist": "project_investor_or_fund_manager_cost_classification.csv"
               }
@@ -2098,7 +2098,7 @@
             "properties": {
               "currency": {
                 "title": "Currency",
-                "description": "Currency",
+                "description": "Currency in which transaction was made or will be made",
                 "$ref": "#/definitions/object_with_value_string"
               },
               "planned": {
@@ -2125,7 +2125,7 @@
           },
           "incurred_by": {
               "title": "Cost incurred by",
-              "description": "",
+              "description": "INDIGO ID of organisation incurring that cost",
               "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "type": {
@@ -2150,12 +2150,12 @@
           },
           "source_ids": {
             "title": "Sources",
-            "description": "Sources of information about the different scenarios.",
+            "description": "Sources of information about costs.",
             "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
-            "description": "Notes on scenarios.",
+            "description": "Notes on costs.",
             "type": "string"
           }
         }
@@ -2169,7 +2169,7 @@
         "properties": {
           "date": {
               "title": "Date",
-              "description": "",
+              "description": "Transaction date",
               "$ref": "#/definitions/object_with_value_date"
           },
           "phase": {
@@ -2178,7 +2178,7 @@
             "properties": {
               "value": {
                 "title": "(Value)",
-                "description": "",
+                "description": "Phases of impact bonds include: development and design, contract set up and negotiation, and operational and management.",
                 "type": "string",
                 "codelist": "project_outcome_payer_cost_phase.csv"
               }
@@ -2190,7 +2190,7 @@
             "properties": {
               "value": {
                 "title": "(Value)",
-                "description": "",
+                "description": "Costs are classified as purchased or spent, in kind, staff costs and other type of costs.",
                 "type": "string",
                 "codelist": "project_outcome_payer_cost_classification.csv"
               }
@@ -2229,7 +2229,7 @@
           },
           "incurred_by": {
               "title": "Cost incurred by",
-              "description": "",
+              "description": "INDIGO ID of the organisation incurring that cost.",
               "$ref": "#/definitions/object_with_value_organisation_reference"
           },
           "type": {
@@ -2254,12 +2254,12 @@
           },
           "source_ids": {
             "title": "Sources",
-            "description": "Sources of information about the different scenarios.",
+            "description": "Sources of information about costs.",
             "$ref": "#/definitions/source_ids"
           },
           "notes": {
             "title": "Notes",
-            "description": "Notes on scenarios.",
+            "description": "Notes on costs.",
             "type": "string"
           }
         }

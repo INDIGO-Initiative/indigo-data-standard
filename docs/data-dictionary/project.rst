@@ -261,13 +261,13 @@ This is a list. One project can have multiple items of data as one project may p
    :schema: project.json
    :path: /properties/scenarios/items
 
-Investor/Fund Manager Cost
---------------------------
+Provider Side Cost
+------------------
 
 
 .. datadictionary::
    :schema: project.json
-   :path: /properties/investor_or_fund_manager_cost/items
+   :path: /properties/provider_side_cost/items
 
 Phase options
 ^^^^^^^^^^^^^
