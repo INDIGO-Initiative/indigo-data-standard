@@ -2103,22 +2103,22 @@
               },
               "planned": {
                 "title": "Planned",
-                "description": "",
+                "description": "This variable captures planned or expected costs for projects that are starting to deliver a service, or are in the middle of service delivery.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "planned_usd": {
                 "title": "Planned USD",
-                "description": "",
+                "description": "This variable captures planned or expected costs in USD for projects that are starting to deliver a service, or are in the middle of service delivery.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "actual": {
                 "title": "Actual",
-                "description": "",
+                "description": "This variable captures actual costs that have been incurred by the provider side.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "actual_usd": {
                 "title": "Actual USD",
-                "description": "",
+                "description": "This variable captures actual costs in USD that have been incurred by the provider side.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
@@ -2142,7 +2142,7 @@
           },
           "days": {
               "title": "Number of days",
-              "description": "",
+              "description": "This variable should only be completed when there are in-kind costs or staff costs that cannot be expressed in monetary values.",
               "$ref": "#/definitions/object_with_value_number"
           },
           "status": {
@@ -2207,22 +2207,22 @@
               },
               "planned": {
                 "title": "Planned",
-                "description": "",
+                "description": "This variable captures planned or expected costs for projects that are starting to deliver a service, or are in the middle of service delivery.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "planned_usd": {
                 "title": "Planned USD",
-                "description": "",
+                "description": "This variable captures planned or expected costs in USD for projects that are starting to deliver a service, or are in the middle of service delivery.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "actual": {
                 "title": "Actual",
-                "description": "",
+                "description": "This variable captures actual costs that have been incurred by the outcome payer.",
                 "$ref": "#/definitions/object_with_value_number"
               },
               "actual_usd": {
                 "title": "Actual USD",
-                "description": "",
+                "description": "This variable captures actual costs in USD that have been incurred by the outcome payer.",
                 "$ref": "#/definitions/object_with_value_number"
               }
             }
@@ -2246,7 +2246,7 @@
           },
           "days": {
               "title": "Number of days",
-              "description": "",
+              "description": "This variable should only be completed when there are in-kind costs or staff costs that cannot be expressed in monetary values.",
               "$ref": "#/definitions/object_with_value_number"
           },
           "status": {
