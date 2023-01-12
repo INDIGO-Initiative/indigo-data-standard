@@ -2092,8 +2092,8 @@
               }
             }
           },
-          "money": {
-            "title": "Money",
+          "payment": {
+            "title": "Payment",
             "type": "object",
             "properties": {
               "currency": {
@@ -2196,8 +2196,8 @@
               }
             }
           },
-          "money": {
-            "title": "Money",
+          "payment": {
+            "title": "Payment",
             "type": "object",
             "properties": {
               "currency": {
