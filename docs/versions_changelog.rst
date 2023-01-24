@@ -28,6 +28,9 @@ Changelog
 Unreleased
 ~~~~~~~~~~
 
+3.1.0 - 2023-01-24
+~~~~~~~~~~~~~~~~~~
+
 Add Provider Side Cost and Outcome Payer Cost to project.
 
 Add duration of service provision (anticipated and actual) to project.
