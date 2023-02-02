@@ -28,6 +28,11 @@ Changelog
 Unreleased
 ~~~~~~~~~~
 
+3.1.1 - 2023-02-03
+~~~~~~~~~~~~~~~~~~
+
+Corrected spelling of "modelling" option in project, Intermediary services, Organisation Role Category.
+
 3.1.0 - 2023-01-24
 ~~~~~~~~~~~~~~~~~~
 
