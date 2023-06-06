@@ -204,16 +204,83 @@ This is a list. One project can have multiple items of data, as one project may 
    :schema: project.json
    :path: /properties/results/items
 
+Outcome Payment Plans
+---------------------
+
+This is a list. One project can have multiple items of data, as one project can have different sets of planned payments over its lifetime. One item of data represents one plan and is defined as:
+
+.. datadictionary::
+   :schema: project.json
+   :path: /properties/outcome_payment_plans/items
+
+
 Outcome Payments
 ----------------
 
-This is a list. One project can have multiple items of data, as one project can receive different outcome payments for different outcome metrics. One item of data represents one outcome payment (to one outcome metric) and is defined as:  
-
+This is a list. One project can have multiple items of data, as one project can receive different outcome payments for different outcome metrics, time periods and plans.
+One item of data represents one outcome payment (to one outcome metric and within one plan) and is defined as:
 
 .. datadictionary::
    :schema: project.json
    :path: /properties/outcome_payments/items
 
+
+Actual payments should have rows of data with "Type" set to "Actual" and with "Outcome Payment Plan Id" set left empty.
+
+Outcome payments can belong to multiple plans, as plans may change over the lifetime of the project.
+Plans should first be declared in the "Outcome Payment Plans" section.
+Then for each plan, add multiple rows in the "Outcome Payments" section.
+Each plan should include all past actual payments, and planned future payments (set "Type" column).
+This may result in some actual payments being duplicated in different plans, but this is acceptable and necessary.
+
+.. list-table:: Example Outcome Payments
+   :header-rows: 1
+
+   * - Plan
+     - Period, Start to end
+     - Type
+     - Amount USD
+   * - plan1
+     - 2020-01-01 to 2020-12-31
+     - Planned
+     - 100,000
+   * - plan1
+     - 2021-01-01 to 2021-12-31
+     - Planned
+     - 100,000
+   * - plan1
+     - 2022-01-01 to 2022-12-31
+     - Planned
+     - 100,000
+   * -
+     -
+     -
+     -
+   * -
+     - 2020-01-01 to 2020-12-31
+     - Actual
+     - 50,000
+   * -
+     -
+     -
+     -
+   * - plan2
+     - 2020-01-01 to 2020-12-31
+     - Actual
+     - 50,000
+   * - plan2
+     - 2021-01-01 to 2021-12-31
+     - Planned
+     - 75,000
+   * - plan2
+     - 2022-01-01 to 2022-12-31
+     - Planned
+     - 75,000
+
+In this example, the project started with a plan and "plan1" was recorded.
+The actual results for the first year were then recorded.
+Given the difference between the plan and the performance, a second plan was made and "plan2" was recorded.
+The second plan includes the actual payment that was considered when making the plan, and thus the actual payment is duplicated.
 
 Open Contracting
 ----------------

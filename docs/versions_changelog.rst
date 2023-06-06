@@ -30,6 +30,8 @@ Unreleased
 
 Project - Removed Scenario Sheet as this is not used.
 
+Project - added new "Outcome Payment Plans" and added reference from "Outcome Payments" to this.
+
 3.1.1 - 2023-02-03
 ~~~~~~~~~~~~~~~~~~
 

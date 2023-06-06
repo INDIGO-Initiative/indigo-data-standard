@@ -1902,12 +1902,71 @@
       },
       "priority": 2
     },
+    "outcome_payment_plans": {
+      "title": "Outcome Payment Plans",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Outcome Payment Plan Id",
+            "description": "A within-project original, flexible identifier to be referenced in another sheet. This can be set by the GO Lab team.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "period": {
+            "title": "Period",
+            "type": "object",
+            "properties": {
+              "start_date": {
+                "title": "Start",
+                "description": "Start date of plan.",
+                "$ref": "#/definitions/object_with_value_date"
+              },
+              "end_date": {
+                "title": "End",
+                "description": "End date of plan.",
+                "$ref": "#/definitions/object_with_value_date"
+              }
+            }
+          },
+          "status": {
+            "$ref": "#/definitions/status"
+          },
+          "sandboxes": {
+            "$ref": "#/definitions/sandboxes"
+          },
+          "source_ids": {
+            "title": "Sources",
+            "description": "Source of information about outcome payment plans.",
+            "$ref": "#/definitions/source_ids"
+          },
+          "notes": {
+            "title": "Notes",
+            "description": "Notes on outcome payment plans.",
+            "type": "string"
+          }
+        }
+      }
+    },
     "outcome_payments": {
       "title": "Outcome Payments",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
+          "outcome_payment_plan_id": {
+            "title": "Outcome Payment Plan Id",
+            "description": "The Outcome Payment Plan this payment belongs to. This should be an Id from the  \"Outcome Payment Plans\" section of the same project. If there is only one plan in this project, this can be left blank.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "references-data-key": "/id",
+                "references-data-list": "/outcome_payment_plans"
+              }
+            }
+          },
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
             "description": "A within-project original, flexible identifier to be referenced in another sheet. This can be set by the GO Lab team. This ID should be equal to the ID that was stated in the “Results” and “Outcome metrics” sections. These identifiers could be ‘outcomemetric1’, ‘outcomemetric2’, etc.",
