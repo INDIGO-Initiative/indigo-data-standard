@@ -40,6 +40,8 @@ Project - changed descriptions for fields that reference other ID's to make it c
   *  "Results" section, "Outcome Metric Id" field
   *  "Outcome Payments" section, "Outcome Metric Id" field
 
+Project - remove "Grant ID" from "Transactions".
+
 3.1.1 - 2023-02-03
 ~~~~~~~~~~~~~~~~~~
 

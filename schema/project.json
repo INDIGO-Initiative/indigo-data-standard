@@ -1422,10 +1422,6 @@
               }
             }
           },
-          "grant_id": {
-            "title": "Grant Id",
-            "$ref": "#/definitions/object_with_value_string"
-          },
           "date": {
             "title": "Date",
             "description": "Date when the transaction occurred.",
