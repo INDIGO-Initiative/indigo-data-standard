@@ -249,17 +249,6 @@ This is a list of supporting documentation for this project. Documents include p
    :schema: project.json
    :path: /properties/documents/items
 
-Scenarios
----------
-
-Stakeholder organisations may forecast different scenarios for one impact bond project. For instance, the best-case scenario will coincide with the achievement of all possible social outcomes. Organisations may plan for the situation where the project does not achieve social outcomes as expected.  
- 
-This is a list. One project can have multiple items of data as one project may plan for different scenarios. One item of data is defined as:
-
-
-.. datadictionary::
-   :schema: project.json
-   :path: /properties/scenarios/items
 
 Provider Side Cost
 ------------------

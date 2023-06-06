@@ -28,6 +28,8 @@ Changelog
 Unreleased
 ~~~~~~~~~~
 
+Project - Removed Scenario Sheet as this is not used.
+
 3.1.1 - 2023-02-03
 ~~~~~~~~~~~~~~~~~~
 
