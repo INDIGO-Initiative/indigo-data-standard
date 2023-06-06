@@ -32,6 +32,14 @@ Project - Removed Scenario Sheet as this is not used.
 
 Project - added new "Outcome Payment Plans" and added reference from "Outcome Payments" to this.
 
+Project - changed descriptions for fields that reference other ID's to make it clear that ID's here should reference the original ID elsewhere and not be created here. This was changed in:
+
+  *  "Outcome Pricings" section, "Outcome Metric Id" field
+  *  "Transactions" section, "Investment Id" and "Outcome Metric Id" fields
+  *  "Technical Assistance Details" section, "Technical Assistance Id" field
+  *  "Results" section, "Outcome Metric Id" field
+  *  "Outcome Payments" section, "Outcome Metric Id" field
+
 3.1.1 - 2023-02-03
 ~~~~~~~~~~~~~~~~~~
 

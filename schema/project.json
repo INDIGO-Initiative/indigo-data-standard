@@ -1318,8 +1318,16 @@
         "properties": {
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
-            "description": "A within-project original, flexible identifier to be referenced in another sheet. This can be set by the GO Lab analyst. This ID should be equal to the ID that was stated in the “Results” and “Outcome metrics” sections.",
-            "$ref": "#/definitions/object_with_value_string"
+            "description": "The Outcome Metric this pricing belongs to. This should be an Id from the \"Outcome Metrics\" section of the same project.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "references-data-key": "/id",
+                "references-data-list": "/outcome_metrics"
+              }
+            }
           },
           "currency": {
             "title": "Currency",
@@ -1390,13 +1398,29 @@
         "properties": {
           "investment_id": {
             "title": "Investment Id",
-            "description": "A within-project original, flexible identifier to be referenced in another sheet.",
-            "$ref": "#/definitions/object_with_value_string"
+            "description": "The Investment this transaction belongs to. This should be an Id from the \"Investments\" section of the same project.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "references-data-key": "/id",
+                "references-data-list": "/investments"
+              }
+            }
           },
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
-            "description": "A within-project original, flexible identifier to be referenced in another sheet.",
-            "$ref": "#/definitions/object_with_value_string"
+            "description": "The Outcome Metric this transaction belongs to. This should be an Id from the \"Outcome Metrics\" section of the same project.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "references-data-key": "/id",
+                "references-data-list": "/outcome_metrics"
+              }
+            }
           },
           "grant_id": {
             "title": "Grant Id",
@@ -1550,8 +1574,16 @@
         "properties": {
           "technical_assistance_id": {
             "title": "Technical Assistance Id",
-            "description": "A within-project original, flexible identifier to be referenced in another sheet.",
-            "$ref": "#/definitions/object_with_value_string"
+            "description": "The Technical Assistance these details belongs to. This should be an Id from the \"Technical Assistance\" section of the same project.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "references-data-key": "/id",
+                "references-data-list": "/technical_assistances"
+              }
+            }
           },
           "title": {
             "title": "Title",
@@ -1715,8 +1747,16 @@
         "properties": {
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
-            "description": "A within-project original, flexible identifier to be referenced in another sheet. This can be set by the GO Lab team. This ID should be equal to the ID that was stated in the “Results” and “Outcome metrics” sections. These identifiers could be ‘outcomemetric1’, ‘outcomemetric2’, etc.",
-            "$ref": "#/definitions/object_with_value_string"
+            "description": "The Outcome Metric this result belongs to. This should be an Id from the \"Outcome Metrics\" section of the same project.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "references-data-key": "/id",
+                "references-data-list": "/outcome_metrics"
+              }
+            }
           },
           "result_level": {
             "title": "Result level",
@@ -1969,8 +2009,16 @@
           },
           "outcome_metric_id": {
             "title": "Outcome Metric Id",
-            "description": "A within-project original, flexible identifier to be referenced in another sheet. This can be set by the GO Lab team. This ID should be equal to the ID that was stated in the “Results” and “Outcome metrics” sections. These identifiers could be ‘outcomemetric1’, ‘outcomemetric2’, etc.",
-            "$ref": "#/definitions/object_with_value_string"
+            "description": "The Outcome Metric this payment belongs to. This should be an Id from the \"Outcome Metrics\" section of the same project.",
+            "type": "object",
+            "properties": {
+              "value": {
+                "title": "(Value)",
+                "type": "string",
+                "references-data-key": "/id",
+                "references-data-list": "/outcome_metrics"
+              }
+            }
           },
           "period": {
             "title": "Period",
