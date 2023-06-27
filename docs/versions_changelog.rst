@@ -25,11 +25,11 @@ Increments to Major numbers:
 Changelog
 ---------
 
-4.0.0 - 2023-06-27
-~~~~~~~~~~~~~~~~~~
-
 Unreleased
 ~~~~~~~~~~
+
+4.0.0 - 2023-06-27
+~~~~~~~~~~~~~~~~~~
 
 Project - Removed Scenario Sheet as this is not used.
 
