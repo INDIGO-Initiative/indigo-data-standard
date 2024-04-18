@@ -586,6 +586,10 @@
               "title": "Humanitarian",
               "$ref": "#/definitions/object_with_value_yes_no"
             },
+            "early_childhood_education": {
+              "title": "Early Childhood Education",
+              "$ref": "#/definitions/object_with_value_yes_no"
+            },
             "other": {
               "title": "Other",
               "$ref": "#/definitions/object_with_value_string"
