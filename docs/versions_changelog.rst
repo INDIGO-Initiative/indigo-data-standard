@@ -28,6 +28,9 @@ Changelog
 Unreleased
 ~~~~~~~~~~
 
+4.1.0 - 2023-10-19
+~~~~~~~~~~~~~~~~~~
+
 Pipeline - added new option "early_childhood_education" to "policy_sector"
 
 4.0.0 - 2023-06-27
